@@ -1,30 +1,31 @@
+import 'package:el_afrik_restaurant/routes/app_pages/app_pages.dart';
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
+import 'package:el_afrik_restaurant/utils/assets_gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+    return ScreenUtilInit(
+        designSize: const Size(428, 925),
+        minTextAdapt: true,
+        //splitScreenMode: true,
+        builder: (_ , child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              fontFamily: FontFamily.peridot,
+            ),
+            getPages: AppPages.pages,
+            initialRoute: AppRoutes.splashScreen,
+          );
+        }
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Hello"),
-      ),
-      body: Center(
-        child: Text("Hello"),
-      ),
-    );
-  }
-}
 
