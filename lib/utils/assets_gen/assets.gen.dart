@@ -45,6 +45,10 @@ class $AssetsImagesGen {
   AssetGenImage get noReward =>
       const AssetGenImage('assets/images/no_reward.png');
 
+  /// File path: assets/images/onboarding_graphics.png
+  AssetGenImage get onboardingGraphics =>
+      const AssetGenImage('assets/images/onboarding_graphics.png');
+
   /// File path: assets/images/out_of_stock.png
   AssetGenImage get outOfStock =>
       const AssetGenImage('assets/images/out_of_stock.png');
@@ -74,6 +78,7 @@ class $AssetsImagesGen {
     noInternet,
     noMenuAvailable,
     noReward,
+    onboardingGraphics,
     outOfStock,
     pickupGraphics,
     qrScanner,

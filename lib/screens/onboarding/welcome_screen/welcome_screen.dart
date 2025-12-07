@@ -1,17 +1,29 @@
+import 'dart:async';
+
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/custom_asset_image/custom_asset_image.dart';
 import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/assets_gen/assets.gen.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
+
+  authCheck() async{
+    await Future.delayed(Duration(seconds: 2));
+    Get.offAllNamed( AppRoutes.onBoardingScreen );
+  }
 
   @override
   Widget build(BuildContext context) {
+
+    unawaited( authCheck() );
+
     return Scaffold(
       backgroundColor: AppColors.white,
       body: Stack(
@@ -48,7 +60,7 @@ class SplashScreen extends StatelessWidget {
                   fontColor: AppColors.grey72,
                   fontWeight: FontWeight.w500,
                 ),
-                SizedBox( height: 60.h,),
+                SizedBox( height: 70.h,),
                 TextWidget(text: AppStrings.tasteTheMagic,
                   fontSize: 16,
                   fontColor: AppColors.white,

@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
               fontFamily: FontFamily.peridot,
             ),
             getPages: AppPages.pages,
-            initialRoute: AppRoutes.splashScreen,
+            initialRoute: AppRoutes.welcomeScreen,
           );
         }
     );
