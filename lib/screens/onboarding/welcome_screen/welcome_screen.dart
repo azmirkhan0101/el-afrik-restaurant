@@ -22,7 +22,9 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    unawaited( authCheck() );
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      authCheck();
+    });
 
     return Scaffold(
       backgroundColor: AppColors.white,

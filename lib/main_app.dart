@@ -1,3 +1,4 @@
+import 'package:el_afrik_restaurant/binding/initial_binding.dart';
 import 'package:el_afrik_restaurant/routes/app_pages/app_pages.dart';
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/assets_gen/fonts.gen.dart';
@@ -20,8 +21,9 @@ class MainApp extends StatelessWidget {
             theme: ThemeData(
               fontFamily: FontFamily.peridot,
             ),
+            initialBinding: InitialBinding(),
             getPages: AppPages.pages,
-            initialRoute: AppRoutes.welcomeScreen,
+            initialRoute: AppRoutes.newPasswordScreen,
           );
         }
     );

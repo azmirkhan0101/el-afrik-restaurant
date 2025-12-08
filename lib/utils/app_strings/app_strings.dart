@@ -13,9 +13,13 @@ class AppStrings {
   static const String firstName = "First name";
   static const String lastName = "Last name";
   static const String emailAddress = "Email address";
+  static const String enterEmail = "enter email";
+  static const String enterPassword = "enter password";
   static const String clear = "Clear";
   static const String dateOfBirth = "Date Of Birth";
+  static const String noDateSelected = "no date selected";
   static const String location = "Location";
+  static const String enterLocation = "enter location";
   static const String contact = "Contact";
   static const String password = "Password";
   static const String confirmPassword = "Confirm Password";
@@ -27,6 +31,7 @@ class AppStrings {
   static const String forgotPassword = "Forgot Password";
   static const String selectTheContactMethod = "Select the contact method we should use to reset your password";
   static const String viaEmail = "via Email:";
+  static const String verifyEmail = "Verify Email";
   static const String verify = "Verify";
   static const String codeHasBeenSendTo = "Code has been send to";
   static const String resendCodeIn = "Resend code in";

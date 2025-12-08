@@ -8,8 +8,14 @@ class AppColors {
 
 
   static const Color white = Color(0xFFFFFFFF);
+  static const Color aniFlashWhite = Color(0xFFFDFDFD);
   static const Color black = Color(0xFF000000);
+  static const Color blackTitle = Color(0xFF1D242D);
+  static const Color blackSubtitle = Color(0xFF2B4E63);
   static const Color grey72 = Color(0xFF727272);
+  static const Color greyB8 = Color(0xFFB8B8B8);
+  static const Color greyCA = Color(0xFFCACACA);
+  static const Color orange = Color(0xFFFCA91B);
   static const Color greenShade = Color(0xFFB0E7C6);
   static const Color greenPrimary = Color(0xFF00B047);
   static const Color gradientEnd = Color(0xFF34C759);

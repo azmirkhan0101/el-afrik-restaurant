@@ -11,6 +11,34 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/apple_login.svg
+  String get appleLogin => 'assets/icons/apple_login.svg';
+
+  /// File path: assets/icons/camera.svg
+  String get camera => 'assets/icons/camera.svg';
+
+  /// File path: assets/icons/eye.svg
+  String get eye => 'assets/icons/eye.svg';
+
+  /// File path: assets/icons/facebook_login.svg
+  String get facebookLogin => 'assets/icons/facebook_login.svg';
+
+  /// File path: assets/icons/google_login.svg
+  String get googleLogin => 'assets/icons/google_login.svg';
+
+  /// List of all assets
+  List<String> get values => [
+    appleLogin,
+    camera,
+    eye,
+    facebookLogin,
+    googleLogin,
+  ];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -22,9 +50,25 @@ class $AssetsImagesGen {
   AssetGenImage get confetti =>
       const AssetGenImage('assets/images/confetti.png');
 
+  /// File path: assets/images/create_password_graphics.png
+  AssetGenImage get createPasswordGraphics =>
+      const AssetGenImage('assets/images/create_password_graphics.png');
+
+  /// File path: assets/images/forgot_password_graphics.png
+  AssetGenImage get forgotPasswordGraphics =>
+      const AssetGenImage('assets/images/forgot_password_graphics.png');
+
   /// File path: assets/images/happy_birthday.png
   AssetGenImage get happyBirthday =>
       const AssetGenImage('assets/images/happy_birthday.png');
+
+  /// File path: assets/images/login_background.png
+  AssetGenImage get loginBackground =>
+      const AssetGenImage('assets/images/login_background.png');
+
+  /// File path: assets/images/login_graphics.png
+  AssetGenImage get loginGraphics =>
+      const AssetGenImage('assets/images/login_graphics.png');
 
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
@@ -49,6 +93,10 @@ class $AssetsImagesGen {
   AssetGenImage get onboardingGraphics =>
       const AssetGenImage('assets/images/onboarding_graphics.png');
 
+  /// File path: assets/images/otp_graphics.png
+  AssetGenImage get otpGraphics =>
+      const AssetGenImage('assets/images/otp_graphics.png');
+
   /// File path: assets/images/out_of_stock.png
   AssetGenImage get outOfStock =>
       const AssetGenImage('assets/images/out_of_stock.png');
@@ -72,13 +120,18 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
     complete,
     confetti,
+    createPasswordGraphics,
+    forgotPasswordGraphics,
     happyBirthday,
+    loginBackground,
+    loginGraphics,
     logo,
     logo1024,
     noInternet,
     noMenuAvailable,
     noReward,
     onboardingGraphics,
+    otpGraphics,
     outOfStock,
     pickupGraphics,
     qrScanner,
@@ -90,6 +143,7 @@ class $AssetsImagesGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 

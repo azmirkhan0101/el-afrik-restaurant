@@ -40,8 +40,8 @@ class ButtonWidget extends StatelessWidget {
     this.buttonHeight = 56,
     this.buttonWidth = 200,
     this.padding,
-    this.buttonRadius = 100,
-    this.backgroundColor,
+    this.buttonRadius = 8,
+    this.backgroundColor = AppColors.greenPrimary,
     this.borderColor,
     this.iconColor,
     this.iconSize,
@@ -54,7 +54,7 @@ class ButtonWidget extends StatelessWidget {
       height: buttonHeight.h,
       width: buttonWidth.w,
       decoration: BoxDecoration(
-        color: backgroundColor ?? AppColors.black,
+        color: backgroundColor,
         borderRadius: BorderRadius.all(Radius.circular(buttonRadius.r)),
         border: Border.all(
           color: borderColor ?? Colors.transparent,
