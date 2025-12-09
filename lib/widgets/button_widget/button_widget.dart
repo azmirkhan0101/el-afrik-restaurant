@@ -16,7 +16,7 @@ class ButtonWidget extends StatelessWidget {
   final FontWeight fontWeight;
   final VoidCallback? onPressed;
   final double buttonHeight;
-  final double buttonWidth;
+  final double? buttonWidth;
   final EdgeInsetsGeometry? padding;
   final double buttonRadius;
   final Color? backgroundColor;
@@ -38,7 +38,7 @@ class ButtonWidget extends StatelessWidget {
     this.fontWeight = FontWeight.w600,
     this.onPressed,
     this.buttonHeight = 56,
-    this.buttonWidth = 200,
+    this.buttonWidth,
     this.padding,
     this.buttonRadius = 8,
     this.backgroundColor = AppColors.greenPrimary,
@@ -52,7 +52,7 @@ class ButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: buttonHeight.h,
-      width: buttonWidth.w,
+      width: buttonWidth?.w,
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.all(Radius.circular(buttonRadius.r)),
