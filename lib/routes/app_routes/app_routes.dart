@@ -17,4 +17,6 @@ class AppRoutes {
   static const String settingsScreen = "/settings_screen";
   static const String changePasswordScreen = "/change_password_screen";
   static const String birthdayScreen = "/birthday_screen";
+  static const String cateringSubmittedScreen = "/catering_submitted_screen";
+  static const String orderCompletedScreen = "/order_completed_screen";
 }

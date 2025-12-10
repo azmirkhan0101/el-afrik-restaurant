@@ -189,6 +189,8 @@ class AppStrings {
   static const String birthdayGiftJustForYou = "Birthday Gift Just For you !";
   static const String enjoyAFreeDessert = "Enjoy a Free Dessert !";
   static const String validFor = "Valid for";
+  static const String days = "days";
+  static const String okay = "Okay";
   static const String claimReward = "Claim Reward";
   static const String yourBirthdayReward = "Your Birthday Reward is ready to use!";
   static const String doYouWantToClaim = "Do you want to claim your birthday reward now?";
@@ -209,8 +211,8 @@ class AppStrings {
   static const String custom = "Custom";
   static const String writeSpecialInstructions = "Write Special Instructions";
   static const String requestingCatering = "Requesting Catering";
-  static const String yourCateringRequest = "Your Catering request has been submitted";
-  static const String weWellContactYouSoon = "We Well Contact You Soon.";
+  static const String yourCateringRequest = "Your Catering request has been submitted.";
+  static const String weWellContactYouSoon = "We Will Contact You Soon.";
   static const String rewardDetails = "Reward Details";
   static const String scanQrCode = "Scan QR Code";
   static const String pointYourCamera = "Point your camera at a QR code and capture it.";

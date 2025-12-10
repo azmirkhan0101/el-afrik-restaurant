@@ -50,6 +50,10 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/birthday_cone.png
+  AssetGenImage get birthdayCone =>
+      const AssetGenImage('assets/images/birthday_cone.png');
+
   /// File path: assets/images/complete.png
   AssetGenImage get complete =>
       const AssetGenImage('assets/images/complete.png');
@@ -126,6 +130,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+    birthdayCone,
     complete,
     confetti,
     createPasswordGraphics,

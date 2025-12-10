@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import '../../../utils/assets_gen/assets.gen.dart';
+import '../../../widgets/button_widget/button_widget.dart';
 
 class BirthdayScreen extends StatelessWidget {
   const BirthdayScreen({super.key});
@@ -19,46 +20,68 @@ class BirthdayScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 30.h,),
           Center(
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.volcano),
-                TextWidget(text: AppStrings.happyBirthday.tr,
+                Image.asset(Assets.images.birthdayCone.keyName,
+                height: 22.h,
+                  width: 22.w,
+                  fit: BoxFit.cover,
+                ),
+                TextWidget(text: "${AppStrings.happyBirthday.tr}     ",
                 fontSize: 22,
                   fontWeight: FontWeight.w700,
                 ),
-                Icon(Icons.volcano),
+                Image.asset(Assets.images.birthdayCone.keyName,
+                  height: 22.h,
+                  width: 22.w,
+                  fit: BoxFit.cover,
+                ),
               ],
             ),
           ),
+          SizedBox( height: 25.h,),
           Center(
             child: Image.asset(Assets.images.happyBirthday.keyName,
             height: 270.h,
               width: 315.w,
             ),
           ),
+          SizedBox( height: 20.h,),
           Padding(
-            padding: EdgeInsets.symmetric( horizontal: 20.w),
+            padding: EdgeInsets.symmetric( horizontal: 30.w),
             child: TextWidget(text: AppStrings.birthdayGiftJustForYou.tr,
             fontSize: 20,
               fontWeight: FontWeight.w600,
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric( horizontal: 20.w),
+            padding: EdgeInsets.symmetric( horizontal: 30.w, vertical: 15.h),
             child: TextWidget(text: AppStrings.enjoyAFreeDessert.tr,
               fontSize: 20,
               fontWeight: FontWeight.w600,
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric( horizontal: 20.w),
-            child: TextWidget(text: AppStrings.validFor.tr,
+            padding: EdgeInsets.symmetric( horizontal: 30.w),
+            child: TextWidget(text: "${AppStrings.validFor.tr} 7 ${AppStrings.days.tr}",
               fontSize: 20,
               fontWeight: FontWeight.w600,
             ),
-          )
+          ),
+          Spacer(),
+          Padding(
+            padding: EdgeInsets.symmetric( horizontal: 31.w ),
+            child: ButtonWidget(label: AppStrings.claimReward.tr,
+              buttonRadius: 100,
+              onPressed: (){
+
+              },
+            ),
+          ),
+          SizedBox(height: 50.h,)
         ],
       ),
     );

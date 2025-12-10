@@ -1,9 +1,11 @@
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/new_password/new_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
+import 'package:el_afrik_restaurant/screens/order/order_completed/order_completed_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
@@ -96,6 +98,16 @@ class AppPages {
         name: AppRoutes.birthdayScreen,
         page: (){
           return BirthdayScreen();
+        }),
+    GetPage(
+        name: AppRoutes.cateringSubmittedScreen,
+        page: (){
+          return CateringSubmittedScreen();
+        }),
+    GetPage(
+        name: AppRoutes.orderCompletedScreen,
+        page: (){
+          return OrderCompletedScreen();
         })
   ];
 }
