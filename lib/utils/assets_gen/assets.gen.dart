@@ -23,19 +23,27 @@ class $AssetsIconsGen {
   /// File path: assets/icons/eye.svg
   String get eye => 'assets/icons/eye.svg';
 
+  /// File path: assets/icons/eye_hide.svg
+  String get eyeHide => 'assets/icons/eye_hide.svg';
+
   /// File path: assets/icons/facebook_login.svg
   String get facebookLogin => 'assets/icons/facebook_login.svg';
 
   /// File path: assets/icons/google_login.svg
   String get googleLogin => 'assets/icons/google_login.svg';
 
+  /// File path: assets/icons/lock.svg
+  String get lock => 'assets/icons/lock.svg';
+
   /// List of all assets
   List<String> get values => [
     appleLogin,
     camera,
     eye,
+    eyeHide,
     facebookLogin,
     googleLogin,
+    lock,
   ];
 }
 

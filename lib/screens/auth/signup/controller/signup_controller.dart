@@ -5,6 +5,8 @@ import 'package:get/get.dart';
 
 class SignupController extends GetxController {
 
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   String contactNumber = "";

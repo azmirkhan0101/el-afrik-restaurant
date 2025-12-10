@@ -7,14 +7,11 @@ import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_utils/src/extensions/internacionalization.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
-import '../../../routes/app_routes/app_routes.dart';
 import '../../../utils/assets_gen/assets.gen.dart';
-import '../../../widgets/text_field_widget/text_field_widget.dart';
+import '../../../widgets/custom_text_field/custom_text_field.dart';
 import '../login/components/bordered_icon_button.dart';
 import 'controller/signup_controller.dart';
 
@@ -89,17 +86,21 @@ class SignupScreen extends StatelessWidget {
                           spacing: 15.w,
                           children: [
                             Expanded(
-                              child: TextFieldWidget(
-                                hint: AppStrings.firstName.tr,
-                                controller: controller.emailController,
+                              child: CustomTextField(
+                                hintText: AppStrings.firstName.tr,
+                                controller: controller.firstNameController,
                                 borderRadius: 10,
+                                prefixIcon: Assets.icons.lock,
+                                isPassword: true,
                               ),
                             ),
                             Expanded(
-                              child: TextFieldWidget(
-                                hint: AppStrings.lastName.tr,
-                                controller: controller.emailController,
+                              child: CustomTextField(
+                                hintText: AppStrings.lastName.tr,
+                                controller: controller.lastNameController,
                                 borderRadius: 10,
+                                prefixIcon: Assets.icons.lock,
+                                isPassword: true,
                               ),
                             ),
                           ],
@@ -117,11 +118,12 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 8),
-                        TextFieldWidget(
-                          hint: AppStrings.enterEmail.tr,
+                        CustomTextField(
+                          hintText: AppStrings.enterEmail.tr,
                           controller: controller.passwordController,
                           borderRadius: 10,
-                          prefixIcon: Icons.email_outlined,
+                          prefixIcon: Assets.icons.lock,
+                          isPassword: true,
                         ),
                         SizedBox(height: 8),
                         //========================DATE OF BIRTH===============================
@@ -152,11 +154,12 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 8),
-                        TextFieldWidget(
-                          hint: "",
+                        CustomTextField(
+                          hintText: "",
                           controller: controller.passwordController,
                           borderRadius: 10,
-                          prefixIcon: Icons.location_on_outlined,
+                          prefixIcon: Assets.icons.lock,
+                          isPassword: true,
                         ),
                         SizedBox(height: 8),
                         //======================CONTACT======================
@@ -204,12 +207,12 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 8),
-                        TextFieldWidget(
-                          hint: AppStrings.enterPassword.tr,
+                        CustomTextField(
+                          hintText: AppStrings.enterPassword.tr,
                           controller: controller.passwordController,
                           borderRadius: 10,
-                          obscureText: true,
-                          obscureIcon: Assets.icons.eye,
+                          prefixIcon: Assets.icons.lock,
+                          isPassword: true,
                         ),
                         SizedBox(height: 8),
                         //===================CONFIRM PASSWORD=========================//
@@ -224,12 +227,12 @@ class SignupScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 8),
-                        TextFieldWidget(
-                          hint: AppStrings.enterPassword.tr,
+                        CustomTextField(
+                          hintText: AppStrings.enterPassword.tr,
                           controller: controller.passwordController,
                           borderRadius: 10,
-                          obscureText: true,
-                          obscureIcon: Assets.icons.eye,
+                          prefixIcon: Assets.icons.lock,
+                          isPassword: true,
                         ),
                         SizedBox(height: 20.h,),
                         //===================BUTTON=========================//

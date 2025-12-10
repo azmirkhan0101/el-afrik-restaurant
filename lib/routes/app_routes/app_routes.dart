@@ -14,4 +14,7 @@ class AppRoutes {
   static const String outOfStockScreen = "/out_of_stock_screen";
   static const String noMenuScreen = "/no_menu_screen";
   static const String noInternetScreen = "/no_internet_screen";
+  static const String settingsScreen = "/settings_screen";
+  static const String changePasswordScreen = "/change_password_screen";
+  static const String birthdayScreen = "/birthday_screen";
 }

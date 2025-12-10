@@ -1,11 +1,14 @@
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/new_password/new_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/out_of_stock/out_of_stock_screen.dart';
+import 'package:el_afrik_restaurant/screens/vip/birthday/birthday_screen.dart';
 import 'package:get/get.dart';
 
 import '../../screens/auth/auth_selection/auth_selection_screen.dart';
@@ -78,6 +81,21 @@ class AppPages {
         name: AppRoutes.noInternetScreen,
         page: (){
           return NoInternetScreen();
+        }),
+    GetPage(
+        name: AppRoutes.settingsScreen,
+        page: (){
+          return SettingsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.changePasswordScreen,
+        page: (){
+          return ChangePasswordScreen();
+        }),
+    GetPage(
+        name: AppRoutes.birthdayScreen,
+        page: (){
+          return BirthdayScreen();
         })
   ];
 }

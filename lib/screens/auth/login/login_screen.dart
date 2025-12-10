@@ -1,6 +1,7 @@
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
+import 'package:el_afrik_restaurant/widgets/custom_text_field/custom_text_field.dart';
 import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,7 +10,6 @@ import 'package:get/get.dart';
 
 import '../../../routes/app_routes/app_routes.dart';
 import '../../../utils/assets_gen/assets.gen.dart';
-import '../../../widgets/text_field_widget/text_field_widget.dart';
 import 'components/bordered_icon_button.dart';
 import 'controller/login_controller.dart';
 
@@ -77,8 +77,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 8),
-                      TextFieldWidget(
-                        hint: AppStrings.enterEmail.tr,
+                      CustomTextField(
+                        hintText: AppStrings.enterEmail.tr,
                         controller: controller.emailController,
                         borderRadius: 10,
                       ),
@@ -95,12 +95,11 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 8),
-                      TextFieldWidget(
-                        hint: AppStrings.enterPassword.tr,
+                      CustomTextField(
+                        hintText: AppStrings.enterPassword.tr,
                         controller: controller.passwordController,
                         borderRadius: 10,
-                        obscureText: true,
-                        obscureIcon: Assets.icons.eye,
+                        isPassword: true,
                       ),
                       //===================FORGOT PASSWORD=========================//
                       Align(
