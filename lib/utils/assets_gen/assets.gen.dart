@@ -11,6 +11,16 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsDummyGen {
+  const $AssetsDummyGen();
+
+  /// File path: assets/dummy/pizza.png
+  AssetGenImage get pizza => const AssetGenImage('assets/dummy/pizza.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [pizza];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -19,6 +29,12 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/camera.svg
   String get camera => 'assets/icons/camera.svg';
+
+  /// File path: assets/icons/cart.svg
+  String get cart => 'assets/icons/cart.svg';
+
+  /// File path: assets/icons/cart_selected.svg
+  String get cartSelected => 'assets/icons/cart_selected.svg';
 
   /// File path: assets/icons/eye.svg
   String get eye => 'assets/icons/eye.svg';
@@ -29,21 +45,63 @@ class $AssetsIconsGen {
   /// File path: assets/icons/facebook_login.svg
   String get facebookLogin => 'assets/icons/facebook_login.svg';
 
+  /// File path: assets/icons/filter.svg
+  String get filter => 'assets/icons/filter.svg';
+
   /// File path: assets/icons/google_login.svg
   String get googleLogin => 'assets/icons/google_login.svg';
 
+  /// File path: assets/icons/home.svg
+  String get home => 'assets/icons/home.svg';
+
+  /// File path: assets/icons/home_selected.svg
+  String get homeSelected => 'assets/icons/home_selected.svg';
+
   /// File path: assets/icons/lock.svg
   String get lock => 'assets/icons/lock.svg';
+
+  /// File path: assets/icons/order.svg
+  String get order => 'assets/icons/order.svg';
+
+  /// File path: assets/icons/order_selected.svg
+  String get orderSelected => 'assets/icons/order_selected.svg';
+
+  /// File path: assets/icons/profile.svg
+  String get profile => 'assets/icons/profile.svg';
+
+  /// File path: assets/icons/profile_selected.svg
+  String get profileSelected => 'assets/icons/profile_selected.svg';
+
+  /// File path: assets/icons/qr_code.svg
+  String get qrCode => 'assets/icons/qr_code.svg';
+
+  /// File path: assets/icons/qr_selected.svg
+  String get qrSelected => 'assets/icons/qr_selected.svg';
+
+  /// File path: assets/icons/search.svg
+  String get search => 'assets/icons/search.svg';
 
   /// List of all assets
   List<String> get values => [
     appleLogin,
     camera,
+    cart,
+    cartSelected,
     eye,
     eyeHide,
     facebookLogin,
+    filter,
     googleLogin,
+    home,
+    homeSelected,
     lock,
+    order,
+    orderSelected,
+    profile,
+    profileSelected,
+    qrCode,
+    qrSelected,
+    search,
   ];
 }
 
@@ -156,6 +214,7 @@ class $AssetsImagesGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsDummyGen dummy = $AssetsDummyGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }

@@ -39,6 +39,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/dummy/
 
   fonts:
     - family: Peridot

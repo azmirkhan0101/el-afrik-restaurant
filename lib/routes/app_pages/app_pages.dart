@@ -4,6 +4,7 @@ import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.da
 import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
+import 'package:el_afrik_restaurant/screens/main_nav/main_nav_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_completed/order_completed_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
@@ -63,6 +64,11 @@ class AppPages {
         name: AppRoutes.signupScreen,
         page: (){
           return SignupScreen();
+        }),
+    GetPage(
+        name: AppRoutes.mainNavScreen,
+        page: (){
+          return MainNavScreen();
         }),
     GetPage(
         name: AppRoutes.noRewardScreen,

@@ -5,6 +5,7 @@ import '../../utils/app_colors/app_colors.dart';
 import '../../utils/global_helper/global_helper.dart';
 
 class TextWidget extends StatelessWidget {
+
   final String text;
   final FontWeight fontWeight;
   final double fontSize;

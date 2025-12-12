@@ -10,6 +10,7 @@ class AppRoutes {
   static const String otpVerifyScreen = "/otp_verify_screen";
   static const String newPasswordScreen = "/new_password_screen";
   static const String signupScreen = "/signup_screen";
+  static const String mainNavScreen = "/main_nav_screen";
   static const String noRewardScreen = "/no_reward_screen";
   static const String outOfStockScreen = "/out_of_stock_screen";
   static const String noMenuScreen = "/no_menu_screen";

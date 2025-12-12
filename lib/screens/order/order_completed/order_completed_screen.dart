@@ -15,6 +15,7 @@ class OrderCompletedScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       body: SizedBox.expand(
         child: Column(
+          spacing: 10.h,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -30,11 +31,17 @@ class OrderCompletedScreen extends StatelessWidget {
             fontSize: 20,
               fontWeight: FontWeight.w700,
             ),
-            TextWidget(text: AppStrings.name.tr),
-            TextWidget(text: AppStrings.contact.tr),
-            TextWidget(text: AppStrings.address.tr),
-            TextWidget(text: AppStrings.deliveryDate.tr),
-            TextWidget(text: AppStrings.deliveryTime.tr),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextWidget(text: AppStrings.name.tr),
+                TextWidget(text: AppStrings.contact.tr),
+                TextWidget(text: AppStrings.address.tr),
+                TextWidget(text: AppStrings.deliveryDate.tr),
+                TextWidget(text: AppStrings.deliveryTime.tr),
+              ],
+            ),
             TextWidget(text: AppStrings.yourOrderHasBeenCompleted.tr,
             fontColor: Colors.blueAccent,
             ),
@@ -53,6 +60,7 @@ class OrderCompletedScreen extends StatelessWidget {
                 Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
               ],
             ),
+            SizedBox( height: 25.h,),
             Padding(
               padding: EdgeInsets.symmetric( horizontal:  35.w ),
               child: ButtonWidget(label: AppStrings.backToHome.tr,
