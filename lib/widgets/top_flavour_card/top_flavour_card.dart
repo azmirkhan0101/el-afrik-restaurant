@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/assets_gen/assets.gen.dart';
 
@@ -25,7 +27,7 @@ class TopFlavourCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 260,
+      width: 285.w,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -48,7 +50,7 @@ class TopFlavourCard extends StatelessWidget {
             ),
             child: Image.network(
               imageUrl,
-              height: 140,
+              height: 140.h,
               width: double.infinity,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
@@ -63,7 +65,7 @@ class TopFlavourCard extends StatelessWidget {
           ),
 
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -102,7 +104,14 @@ class TopFlavourCard extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 12),
-
+                Row(
+                  children: const [
+                    Icon(Icons.star, size: 18, color: Colors.amber),
+                    SizedBox(width: 4),
+                    Text("9.5", style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+                const SizedBox(height: 12),
                 // BOTTOM INFO (time, rating, points)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,17 +124,11 @@ class TopFlavourCard extends StatelessWidget {
                       ],
                     ),
                     Row(
-                      children: const [
-                        Icon(Icons.star, size: 18, color: Colors.amber),
-                        SizedBox(width: 4),
-                        Text("9.5", style: TextStyle(fontSize: 12)),
-                      ],
-                    ),
-                    Row(
-                      children: const [
-                        Icon(Icons.card_giftcard,
-                            size: 18, color: Colors.deepOrange),
-                        SizedBox(width: 4),
+                      children: [
+                        SvgPicture.asset(Assets.icons.loyaltyPoint,
+                        height: 18.h,
+                          width: 18.h,
+                        ),SizedBox(width: 4),
                         Text("10 Point", style: TextStyle(fontSize: 12)),
                       ],
                     ),

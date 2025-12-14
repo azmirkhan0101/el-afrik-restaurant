@@ -60,6 +60,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/lock.svg
   String get lock => 'assets/icons/lock.svg';
 
+  /// File path: assets/icons/loyalty_point.svg
+  String get loyaltyPoint => 'assets/icons/loyalty_point.svg';
+
   /// File path: assets/icons/order.svg
   String get order => 'assets/icons/order.svg';
 
@@ -95,6 +98,7 @@ class $AssetsIconsGen {
     home,
     homeSelected,
     lock,
+    loyaltyPoint,
     order,
     orderSelected,
     profile,
