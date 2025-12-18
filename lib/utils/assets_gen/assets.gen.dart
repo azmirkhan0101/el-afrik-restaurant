@@ -17,8 +17,25 @@ class $AssetsDummyGen {
   /// File path: assets/dummy/pizza.png
   AssetGenImage get pizza => const AssetGenImage('assets/dummy/pizza.png');
 
+  /// File path: assets/dummy/slider_item.png
+  AssetGenImage get sliderItem =>
+      const AssetGenImage('assets/dummy/slider_item.png');
+
+  /// File path: assets/dummy/top_flavour_dummy.png
+  AssetGenImage get topFlavourDummy =>
+      const AssetGenImage('assets/dummy/top_flavour_dummy.png');
+
+  /// File path: assets/dummy/top_flavour_item.png
+  AssetGenImage get topFlavourItem =>
+      const AssetGenImage('assets/dummy/top_flavour_item.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [pizza];
+  List<AssetGenImage> get values => [
+    pizza,
+    sliderItem,
+    topFlavourDummy,
+    topFlavourItem,
+  ];
 }
 
 class $AssetsIconsGen {

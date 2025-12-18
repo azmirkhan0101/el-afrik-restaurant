@@ -20,4 +20,5 @@ class AppRoutes {
   static const String birthdayScreen = "/birthday_screen";
   static const String cateringSubmittedScreen = "/catering_submitted_screen";
   static const String orderCompletedScreen = "/order_completed_screen";
+  static const String topFlavoursScreen = "/top_flavours_screen";
 }

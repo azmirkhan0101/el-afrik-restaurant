@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_colors/app_colors.dart';
+import '../../utils/assets_gen/fonts.gen.dart';
 import '../../utils/global_helper/global_helper.dart';
 
 class TextWidget extends StatelessWidget {
@@ -30,7 +31,7 @@ class TextWidget extends StatelessWidget {
     this.overflow,
     this.maxLines,
     this.textAlignment = TextAlign.center,
-    this.fontFamily,
+    this.fontFamily = FontFamily.peridot,
     this.underline = false,
     this.underlineColor,
     this.underlineWidth = 1.0,

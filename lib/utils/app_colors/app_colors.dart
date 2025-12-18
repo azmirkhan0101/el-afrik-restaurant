@@ -18,6 +18,7 @@ class AppColors {
   static const Color greyCA = Color(0xFFCACACA);
   static const Color orange = Color(0xFFFCA91B);
   static const Color greenShade = Color(0xFFB0E7C6);
+  static const Color categoryGreen = Color(0xFFCADFC5);
   static const Color greenPrimary = Color(0xFF00B047);
   static const Color gradientEnd = Color(0xFF34C759);
 

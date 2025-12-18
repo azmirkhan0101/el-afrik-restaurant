@@ -1,3 +1,5 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
+import 'package:el_afrik_restaurant/screens/home/home/widgets/image_slider.dart';
 import 'package:el_afrik_restaurant/widgets/top_flavour_card/top_flavour_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -63,6 +65,9 @@ class HomeScreen extends StatelessWidget {
                 ]
               ),
             ),
+            SizedBox( height: 20.h,),
+            //===================IMAGE SLIDER=========================//
+            ImageSlider(),
             //===================CATEGORIES - VIEW ALL=========================//
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -100,7 +105,9 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed( AppRoutes.topFlavoursScreen);
+                    },
                     child: TextWidget(
                       text: AppStrings.viewAll.tr,
                       fontSize: 14,
@@ -111,24 +118,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             topFlavoursItems(),
-            SizedBox(height: 10.h),
-            //===================HORIZONTAL SCROLL TRENDING PRODUCTS ITEMS=========================//
-            // SingleChildScrollView(
-            //   scrollDirection: Axis.horizontal,
-            //   child: Row(
-            //     children: [
-            //       SizedBoxWidget(width: 20.w,),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       TrendingProductsItem(),
-            //       SizedBoxWidget(width: 12.w,),
-            //     ],
-            //   ),
-            // ),
+            SizedBox(height: 20.h),
           ],
         ),
       ),
@@ -207,9 +197,11 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
+        spacing: 12.w,
         children: [
-          SizedBox(width: 15.w),
-          TopFlavourCard(imageUrl: "nothing",
+          SizedBox(width: 10.w),
+          TopFlavourCard(
+              imageUrl: "",
               title: "Crazy tacko",
               subtitle: "Delicouse tackos, appetizing...",
               price: 45.5,
@@ -217,9 +209,16 @@ class HomeScreen extends StatelessWidget {
               rating: 9.5,
               points: 10
           ),
-    SizedBox(width: 5.w),
-
-          SizedBox(width: 5.w),
+          TopFlavourCard(
+              imageUrl: "",
+              title: "Crazy tacko",
+              subtitle: "Delicouse tackos, appetizing...",
+              price: 45.5,
+              deliveryTime: "40-50min",
+              rating: 9.5,
+              points: 10
+          ),
+          SizedBox(width: 15.w),
         ],
       ),
     );
