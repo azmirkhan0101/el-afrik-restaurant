@@ -78,14 +78,15 @@ class TopFlavourItem extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           "\$${currentPrice.toStringAsFixed(2)}",
                           style: const TextStyle(
                             color: Colors.green,
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 16,
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -94,7 +95,7 @@ class TopFlavourItem extends StatelessWidget {
                           style: const TextStyle(
                             color: Colors.redAccent,
                             decoration: TextDecoration.lineThrough,
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ],
@@ -104,7 +105,7 @@ class TopFlavourItem extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(4),
                         decoration: const BoxDecoration(
-                          color: Color(0xFFD35433), // The reddish-orange color
+                          color: Colors.green, // The reddish-orange color
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(Icons.add, color: Colors.white, size: 20),
@@ -134,7 +135,7 @@ class TopFlavourItem extends StatelessWidget {
 
     return Image.network(
       imageUrl,
-      height: 150.h,
+      height: 118.h,
       width: double.infinity,
       fit: BoxFit.cover,
       errorBuilder: (context, error, stackTrace) {

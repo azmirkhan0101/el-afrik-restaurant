@@ -10,35 +10,13 @@ import 'package:get/get.dart';
 import '../../utils/assets_gen/assets.gen.dart';
 
 class MainNavScreen extends StatelessWidget {
+
   final MainNavController controller = Get.find<MainNavController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      appBar: AppBar(
-        forceMaterialTransparency: true,
-        title: Obx(() {
-          if (controller.currentIndex.value != 1) {
-            //NOT ORDER TAB
-            return Image.asset(
-              Assets.images.logo.keyName,
-              height: 61.h,
-              width: 109.w,
-            );
-          } else {
-            return TextWidget(text: AppStrings.order.tr);
-          }
-        }),
-        centerTitle: true,
-        leading: Icon(Icons.menu, color: AppColors.greenPrimary),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.notifications, color: AppColors.greenPrimary),
-          ),
-        ],
-      ),
       body: Obx((){
         return controller.screens[controller.currentIndex.value];
       }),

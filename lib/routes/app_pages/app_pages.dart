@@ -4,10 +4,13 @@ import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.da
 import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
+import 'package:el_afrik_restaurant/screens/home/categories/categories_screen.dart';
+import 'package:el_afrik_restaurant/screens/home/item_details/item_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/top_flavours/top_flavours_screen.dart';
 import 'package:el_afrik_restaurant/screens/main_nav/main_nav_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_completed/order_completed_screen.dart';
+import 'package:el_afrik_restaurant/screens/order/order_details/order_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
@@ -120,6 +123,21 @@ class AppPages {
         name: AppRoutes.topFlavoursScreen,
         page: (){
           return TopFlavoursScreen();
+        }),
+    GetPage(
+        name: AppRoutes.categoriesScreen,
+        page: (){
+          return CategoriesScreen();
+        }),
+    GetPage(
+        name: AppRoutes.itemDetailsScreen,
+        page: (){
+          return ItemDetailsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.orderDetailsScreen,
+        page: (){
+          return OrderDetailsScreen();
         })
   ];
 }

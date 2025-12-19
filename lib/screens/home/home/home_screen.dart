@@ -21,6 +21,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
+      appBar: AppBar(
+        forceMaterialTransparency: true,
+        title: Image.asset(
+          Assets.images.logo.keyName,
+          height: 61.h,
+          width: 109.w,
+        ),
+        centerTitle: true,
+        leading: Icon(Icons.menu, color: AppColors.greenPrimary),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications, color: AppColors.greenPrimary),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +96,9 @@ class HomeScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed( AppRoutes.categoriesScreen);
+                    },
                     child: TextWidget(
                       text: AppStrings.viewAll.tr,
                       fontSize: 14,
@@ -139,7 +157,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
           CategoryItem(
@@ -148,7 +166,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
           CategoryItem(
@@ -157,7 +175,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
           CategoryItem(
@@ -166,7 +184,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
           CategoryItem(
@@ -175,7 +193,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
           CategoryItem(
@@ -184,7 +202,7 @@ class HomeScreen extends StatelessWidget {
             imageHeight: 62,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
-            itemName: AppStrings.categories,
+            itemName: "Pizza",
           ),
           SizedBox(width: 5.w),
         ],

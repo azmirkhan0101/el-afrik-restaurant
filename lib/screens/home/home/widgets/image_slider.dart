@@ -47,7 +47,7 @@ class ImageSlider extends StatelessWidget {
           items: imgList.map((url) {
             return ClipRRect(
               borderRadius: BorderRadius.circular(15),
-              child: Image.asset(url, fit: BoxFit.cover, width: double.infinity),
+              child: Image.asset(url, fit: BoxFit.scaleDown, width: double.infinity),
             );
           }).toList(),
         ),

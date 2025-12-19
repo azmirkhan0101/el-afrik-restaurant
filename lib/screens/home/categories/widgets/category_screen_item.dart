@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../utils/app_colors/app_colors.dart';
-import '../../utils/assets_gen/assets.gen.dart';
-import '../text_widget/text_widgets.dart';
+import '../../../../utils/app_colors/app_colors.dart';
+import '../../../../utils/assets_gen/assets.gen.dart';
+import '../../../../widgets/text_widget/text_widgets.dart';
 
-class CategoryItem extends StatelessWidget {
+class CategoryScreenItem extends StatelessWidget {
 
   final String imagePath;
   final String itemName;
@@ -13,9 +13,8 @@ class CategoryItem extends StatelessWidget {
   final double width;
   final double imageWidth;
   final double imageHeight;
-  final double marginRight;
 
-  const CategoryItem({
+  const CategoryScreenItem({
     super.key,
     required this.imagePath,
     required this.itemName,
@@ -23,7 +22,6 @@ class CategoryItem extends StatelessWidget {
     this.width = 80,
     this.imageHeight = 65,
     this.imageWidth = 65,
-    this.marginRight = 10,
   });
 
   @override
@@ -31,23 +29,19 @@ class CategoryItem extends StatelessWidget {
     return Container(
       height: height.h,
       width: width.w,
-      margin: EdgeInsets.only(right: marginRight.w),
-      decoration: BoxDecoration(
-          color: AppColors.categoryGreen,
-          borderRadius: BorderRadius.circular(10)
-      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: 8.h,
         children: [
-          Image.asset(
-              Assets.dummy.pizza.keyName,
-              width:imageWidth.w,
-              height: imageHeight.h,
+          CircleAvatar(
+            radius: 34.r,
+            backgroundImage: AssetImage(Assets.dummy.pizza.keyName,
+            )
           ),
           Expanded(
             child: TextWidget(text: itemName,
-              fontSize: 16.sp,
+              fontSize: 18.sp,
               fontColor: AppColors.black,
               maxLines: 1,
               fontWeight: FontWeight.w700,

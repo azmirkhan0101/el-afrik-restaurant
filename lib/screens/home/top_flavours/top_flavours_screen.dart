@@ -53,6 +53,42 @@ class TopFlavoursScreen extends StatelessWidget {
         originalPrice: 28.50,
         isFavorite: true,
       ),
+      TopFlavoursModel(
+        id: 'p1',
+        name: 'Cheesy Pan Pizza',
+        imageUrl: '',
+        weightInfo: '(± 50 gm)',
+        currentPrice: 22.00,
+        originalPrice: 25.00,
+        isFavorite: true,
+      ),
+      TopFlavoursModel(
+        id: 'p2',
+        name: 'Pepperoni Feast',
+        imageUrl: '',
+        weightInfo: '(± 60 gm)',
+        currentPrice: 18.50,
+        originalPrice: 22.00,
+        isFavorite: false,
+      ),
+      TopFlavoursModel(
+        id: 'p3',
+        name: 'Veggie Supreme',
+        imageUrl: '',
+        weightInfo: '(± 45 gm)',
+        currentPrice: 20.00,
+        originalPrice: 20.00, // No discount example
+        isFavorite: false,
+      ),
+      TopFlavoursModel(
+        id: 'p4',
+        name: 'BBQ Chicken Blast',
+        imageUrl: '',
+        weightInfo: '(± 70 gm)',
+        currentPrice: 24.00,
+        originalPrice: 28.50,
+        isFavorite: true,
+      ),
     ];
 
     return Scaffold(
@@ -66,73 +102,77 @@ class TopFlavoursScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Padding(padding: EdgeInsets.symmetric(horizontal: 18.w),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          //===================SEARCH - FILTER=========================//
-          Row(
-              spacing: 6.w,
-              children: [
-                Expanded(
-                  child: SearchBar(
-                    constraints: BoxConstraints(maxHeight: 55.h, minHeight: 55.h),
-                    padding: WidgetStateProperty.all(
-                      EdgeInsets.symmetric(horizontal: 10),
-                    ),
-                    hintText: AppStrings.search.tr,
-                    hintStyle: WidgetStatePropertyAll(TextStyle(color: Colors.grey)),
-                    backgroundColor: WidgetStateProperty.all(Colors.transparent),
-                    elevation: WidgetStateProperty.all(0),
-                    leading: SvgPicture.asset(Assets.icons.search),
-                    shape: WidgetStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.w),
-                        side: BorderSide(color: Colors.grey, width: 1.w),
+      body: SingleChildScrollView(
+        child: Padding(padding: EdgeInsets.symmetric(horizontal: 18.w),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            //===================SEARCH - FILTER=========================//
+            Row(
+                spacing: 6.w,
+                children: [
+                  Expanded(
+                    child: SearchBar(
+                      constraints: BoxConstraints(maxHeight: 55.h, minHeight: 55.h),
+                      padding: WidgetStateProperty.all(
+                        EdgeInsets.symmetric(horizontal: 10),
+                      ),
+                      hintText: AppStrings.search.tr,
+                      hintStyle: WidgetStatePropertyAll(TextStyle(color: Colors.grey)),
+                      backgroundColor: WidgetStateProperty.all(Colors.transparent),
+                      elevation: WidgetStateProperty.all(0),
+                      leading: SvgPicture.asset(Assets.icons.search),
+                      shape: WidgetStateProperty.all(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.w),
+                          side: BorderSide(color: Colors.grey, width: 1.w),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  height: 50.h,
-                  width: 56.h,
-                  padding: EdgeInsets.all(15.r),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    color: AppColors.greenPrimary,
-                  ),
-                  child: SvgPicture.asset(Assets.icons.filter,
-                  ),
-                )
-              ]
-          ),
-          //===================ITEMS GRID=========================//
-          GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            padding: EdgeInsets.zero,
-            itemCount: dummyModels.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 8.h,
-              crossAxisSpacing: 8.w,
-              mainAxisExtent: 210.h,
+                  Container(
+                    height: 50.h,
+                    width: 56.h,
+                    padding: EdgeInsets.all(15.r),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: AppColors.greenPrimary,
+                    ),
+                    child: SvgPicture.asset(Assets.icons.filter,
+                    ),
+                  )
+                ]
             ),
-            itemBuilder: (context, index) {
+            SizedBox(height: 20.h,),
+            //===================ITEMS GRID=========================//
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              padding: EdgeInsets.zero,
+              itemCount: dummyModels.length,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 8.h,
+                crossAxisSpacing: 8.w,
+                mainAxisExtent: 310.h,
+              ),
+              itemBuilder: (context, index) {
 
-              final TopFlavoursModel model = dummyModels[index];
+                final TopFlavoursModel model = dummyModels[index];
 
-              return TopFlavourItem(
-                  imageUrl: model.imageUrl,
-                  title: model.name,
-                  weightInfo: model.weightInfo,
-                  currentPrice: model.currentPrice,
-                  originalPrice: model.originalPrice
-              );
-            },
-          ),
-        ],
-      ),
+                return TopFlavourItem(
+                    imageUrl: model.imageUrl,
+                    title: model.name,
+                    weightInfo: model.weightInfo,
+                    currentPrice: model.currentPrice,
+                    originalPrice: model.originalPrice
+                );
+              },
+            ),
+            SizedBox( height: 30.h,)
+          ],
+        ),
+        ),
       ),
     );
   }

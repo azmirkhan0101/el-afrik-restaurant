@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -7,6 +9,7 @@ import '../text_widget/text_widgets.dart';
 class ButtonWidget extends StatelessWidget {
   final String label;
   final IconData? prefixIcon;
+  final double prefixIconSize;
   final Color prefixIconColor;
   final IconData? icon;
   final double? iconHeight;
@@ -30,6 +33,7 @@ class ButtonWidget extends StatelessWidget {
     required this.label,
     this.icon,
     this.prefixIcon,
+    this.prefixIconSize = 20,
     this.prefixIconColor = AppColors.white,
     this.iconHeight,
     this.iconWidth,
@@ -73,7 +77,7 @@ class ButtonWidget extends StatelessWidget {
             if (prefixIcon != null)
               Icon(prefixIcon,
                 color: prefixIconColor,
-                size: 20.r,
+                size: prefixIconSize.r,
               ),
             if (prefixIcon != null) SizedBox(width: 12.w),
             TextWidget(

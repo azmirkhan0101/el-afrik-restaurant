@@ -14,6 +14,13 @@ import 'package:flutter/widgets.dart';
 class $AssetsDummyGen {
   const $AssetsDummyGen();
 
+  /// File path: assets/dummy/order.png
+  AssetGenImage get order => const AssetGenImage('assets/dummy/order.png');
+
+  /// File path: assets/dummy/orderd_item.png
+  AssetGenImage get orderdItem =>
+      const AssetGenImage('assets/dummy/orderd_item.png');
+
   /// File path: assets/dummy/pizza.png
   AssetGenImage get pizza => const AssetGenImage('assets/dummy/pizza.png');
 
@@ -31,6 +38,8 @@ class $AssetsDummyGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [
+    order,
+    orderdItem,
     pizza,
     sliderItem,
     topFlavourDummy,
