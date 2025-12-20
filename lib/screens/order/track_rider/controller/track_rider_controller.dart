@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -6,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class MapRouteController extends GetxController {
-  final String apiKey = dotenv.get('API_KEY');
+  final String apiKey = dotenv.get('GOOGLE_MAPS_API_KEY');
   final Dio _dio = Dio();
 
   static const LatLng startLocation = LatLng(40.7128, -74.0060);
@@ -21,19 +23,57 @@ class MapRouteController extends GetxController {
   Rx<RxStatus> status = Rx<RxStatus>(RxStatus.loading());
   Rx<TravelMode> currentTravelMode = TravelMode.driving.obs;
 
+  late Marker riderMarker;
+
   @override
   void onInit() {
     super.onInit();
-    _addInitialMarkers();
+    loadBikeMarker();
     _fetchData();
   }
+
+  late BitmapDescriptor bikeMarkerIcon;
+
+  Future<void> loadBikeMarker() async {
+    bikeMarkerIcon = await BitmapDescriptor.fromAssetImage(
+      const ImageConfiguration(size: Size(96, 96)),
+      'assets/images/rider_icon.png',
+    );
+    riderMarker = Marker(
+      markerId: const MarkerId('end'),
+      position: endLocation,
+      icon: bikeMarkerIcon,
+      rotation: getBearing( startLocation, endLocation ),
+      flat: true,
+      anchor: const Offset(0.5, 0.5), //center align
+    );
+
+    markers.add(riderMarker);
+    _addInitialMarkers();
+  }
+
+  double getBearing(LatLng start, LatLng end) {
+    final lat1 = start.latitude * pi / 180;
+    final lat2 = end.latitude * pi / 180;
+    final dLon = (end.longitude - start.longitude) * pi / 180;
+
+    final y = sin(dLon) * cos(lat2);
+    final x = cos(lat1) * sin(lat2) -
+        sin(lat1) * cos(lat2) * cos(dLon);
+
+    return (atan2(y, x) * 180 / pi + 360) % 360;
+  }
+
+
+
+
 
   // add start and end markers
   void _addInitialMarkers() {
     markers.add(
       const Marker(markerId: MarkerId('start'), position: startLocation),
     );
-    markers.add(const Marker(markerId: MarkerId('end'), position: endLocation));
+    //markers.add(const Marker(markerId: MarkerId('end'), position: endLocation));
   }
 
   // update selected travel mode

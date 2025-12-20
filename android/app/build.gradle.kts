@@ -1,9 +1,19 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+
+val envProperties = Properties()
+val envFile = rootProject.file(".env")
+
+if (envFile.exists()) {
+    envProperties.load(envFile.inputStream())
+}
+
 
 android {
     namespace = "com.azmir.el_afrik_restaurant"
@@ -20,6 +30,8 @@ android {
     }
 
     defaultConfig {
+        manifestPlaceholders["GOOGLE_MAPS_API_KEY"] =
+            envProperties.getProperty("GOOGLE_MAPS_API_KEY") ?: ""
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.azmir.el_afrik_restaurant"
         // You can update the following values to match your application needs.
