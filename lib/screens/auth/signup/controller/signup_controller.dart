@@ -9,6 +9,8 @@ class SignupController extends GetxController {
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController locationController = TextEditingController();
   String contactNumber = "";
   late final DateTime? dateOfBirth;
 

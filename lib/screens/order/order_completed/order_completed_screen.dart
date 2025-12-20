@@ -1,3 +1,4 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
@@ -69,7 +70,7 @@ class OrderCompletedScreen extends StatelessWidget {
                 borderColor: AppColors.orange,
                 textColor: AppColors.orange,
                 onPressed: (){
-
+                Get.toNamed(AppRoutes.mainNavScreen);
                 },
               ),
             )

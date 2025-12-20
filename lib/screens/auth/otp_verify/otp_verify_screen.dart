@@ -1,3 +1,4 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/controller/otp_verify_controller.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
@@ -94,6 +95,9 @@ class OtpVerifyScreen extends StatelessWidget {
                         backgroundColor: AppColors.greenPrimary,
                         buttonWidth: double.infinity,
                         buttonHeight: 60.h,
+                        onPressed: (){
+                        Get.toNamed(AppRoutes.newPasswordScreen);
+                        },
                       ),
                       SizedBox(height: 10.h,),
                     ],

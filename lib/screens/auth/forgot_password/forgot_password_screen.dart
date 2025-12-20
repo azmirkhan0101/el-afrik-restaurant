@@ -1,3 +1,4 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
@@ -107,11 +108,15 @@ class ForgotPasswordScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 20.h,),
                       //===================BUTTON=========================//
-                      ButtonWidget(label: AppStrings.verify.tr,
+                      ButtonWidget(
+                        label: AppStrings.verify.tr,
                         fontWeight: FontWeight.w700,
                         backgroundColor: AppColors.greenPrimary,
                         buttonWidth: double.infinity,
                         buttonHeight: 60.h,
+                        onPressed: (){
+                        Get.toNamed(AppRoutes.otpVerifyScreen);
+                        },
                       ),
                       SizedBox(height: 10.h,),
                     ],

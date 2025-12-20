@@ -110,11 +110,16 @@ class LoginScreen extends StatelessWidget {
                             onTap: (){
                               Get.toNamed(AppRoutes.welcomeScreen);
                             },
-                            child: TextWidget(text: AppStrings.forgotThePassword.tr,
-                              fontColor: AppColors.orange,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              figmaLetterSpacing: -5,
+                            child: GestureDetector(
+                              onTap: (){
+                                Get.toNamed(AppRoutes.forgotPasswordScreen);
+                              },
+                              child: TextWidget(text: AppStrings.forgotThePassword.tr,
+                                fontColor: AppColors.orange,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                figmaLetterSpacing: -5,
+                              ),
                             ),
                           ),
                         ),
@@ -126,6 +131,9 @@ class LoginScreen extends StatelessWidget {
                         backgroundColor: AppColors.greenPrimary,
                         buttonWidth: double.infinity,
                         buttonHeight: 60.h,
+                        onPressed: (){
+                        Get.toNamed( AppRoutes.mainNavScreen);
+                        },
                       ),
                       SizedBox(height: 10.h,),
                       //===================DIVIDER=========================//

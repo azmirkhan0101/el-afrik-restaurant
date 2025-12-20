@@ -1,7 +1,9 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../utils/app_colors/app_colors.dart';
 import '../../../utils/assets_gen/assets.gen.dart';
@@ -39,6 +41,9 @@ class AuthSelectionScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 45.w),
               child: ButtonWidget(label: AppStrings.logIn,
                 buttonWidth: double.infinity,
+                onPressed:(){
+                Get.toNamed( AppRoutes.loginScreen);
+                },
               ),
             ),
             SizedBox(height: 20.h,),
@@ -50,6 +55,9 @@ class AuthSelectionScreen extends StatelessWidget {
                 borderWidth: 2.r,
                 borderColor: AppColors.orange,
                 textColor: AppColors.orange,
+                onPressed:(){
+                  Get.toNamed( AppRoutes.signupScreen);
+                },
               ),
             )
           ],

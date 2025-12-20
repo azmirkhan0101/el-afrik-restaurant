@@ -1,4 +1,5 @@
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
+import 'package:el_afrik_restaurant/screens/home/home/widgets/custom_drawer.dart';
 import 'package:el_afrik_restaurant/screens/home/home/widgets/image_slider.dart';
 import 'package:el_afrik_restaurant/widgets/top_flavour_card/top_flavour_card.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +24,14 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.white,
       appBar: AppBar(
         forceMaterialTransparency: true,
+        iconTheme: IconThemeData(color: AppColors.greenPrimary),
         title: Image.asset(
           Assets.images.logo.keyName,
           height: 61.h,
           width: 109.w,
         ),
         centerTitle: true,
-        leading: Icon(Icons.menu, color: AppColors.greenPrimary),
+        //leading: Icon(Icons.menu, color: AppColors.greenPrimary),
         actions: [
           IconButton(
             onPressed: () {},
@@ -37,6 +39,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                 ]
               ),
             ),
-            SizedBox( height: 20.h,),
+            SizedBox( height: 10.h,),
             //===================IMAGE SLIDER=========================//
             ImageSlider(),
             //===================CATEGORIES - VIEW ALL=========================//
@@ -218,6 +221,24 @@ class HomeScreen extends StatelessWidget {
         spacing: 12.w,
         children: [
           SizedBox(width: 10.w),
+          TopFlavourCard(
+              imageUrl: "",
+              title: "Crazy tacko",
+              subtitle: "Delicouse tackos, appetizing...",
+              price: 45.5,
+              deliveryTime: "40-50min",
+              rating: 9.5,
+              points: 10
+          ),
+          TopFlavourCard(
+              imageUrl: "",
+              title: "Crazy tacko",
+              subtitle: "Delicouse tackos, appetizing...",
+              price: 45.5,
+              deliveryTime: "40-50min",
+              rating: 9.5,
+              points: 10
+          ),
           TopFlavourCard(
               imageUrl: "",
               title: "Crazy tacko",

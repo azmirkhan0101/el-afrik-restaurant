@@ -1,4 +1,5 @@
 import 'package:el_afrik_restaurant/data/models/order/ordered_item/ordered_item_model.dart';
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/order/order_details/widgets/order_details_item.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
@@ -104,8 +105,9 @@ class OrderDetailsScreen extends StatelessWidget {
                 TextWidget(text: "\$730", fontColor: Colors.blue, fontSize: 20, fontWeight: FontWeight.w700,),
               ],
             ),
-            Center(child: TextButton(onPressed: (){
-
+            Center(
+              child: TextButton(onPressed: (){
+                Get.toNamed(AppRoutes.trackRiderScreen);
             }, child: TextWidget(
                 text: AppStrings.viewRidersLocation.tr,
             fontColor: AppColors.orange,
@@ -114,6 +116,9 @@ class OrderDetailsScreen extends StatelessWidget {
             ButtonWidget(label: AppStrings.complete.tr,
             backgroundColor: AppColors.greenPrimary,
             buttonWidth: double.infinity,
+              onPressed: (){
+              Get.toNamed(AppRoutes.orderCompletedScreen);
+              },
             ),
             SizedBox(height: 35.h,)
           ],

@@ -11,6 +11,7 @@ import 'package:el_afrik_restaurant/screens/main_nav/main_nav_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_completed/order_completed_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_details/order_details_screen.dart';
+import 'package:el_afrik_restaurant/screens/order/track_rider/track_rider_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
@@ -138,6 +139,11 @@ class AppPages {
         name: AppRoutes.orderDetailsScreen,
         page: (){
           return OrderDetailsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.trackRiderScreen,
+        page: (){
+          return TrackRiderScreen();
         })
   ];
 }

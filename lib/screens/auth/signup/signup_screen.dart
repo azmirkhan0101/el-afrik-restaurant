@@ -1,3 +1,4 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
@@ -68,7 +69,7 @@ class SignupScreen extends StatelessWidget {
                           )
                         ),
                         SizedBox(height: 8),
-                        //===================EMAIL=========================//
+                        //===================FULL NAME=========================//
                         Align(
                           alignment: Alignment.topLeft,
                           child: TextWidget(
@@ -91,7 +92,7 @@ class SignupScreen extends StatelessWidget {
                                 controller: controller.firstNameController,
                                 borderRadius: 10,
                                 prefixIcon: Assets.icons.lock,
-                                isPassword: true,
+                                isPassword: false,
                               ),
                             ),
                             Expanded(
@@ -100,7 +101,7 @@ class SignupScreen extends StatelessWidget {
                                 controller: controller.lastNameController,
                                 borderRadius: 10,
                                 prefixIcon: Assets.icons.lock,
-                                isPassword: true,
+                                isPassword: false,
                               ),
                             ),
                           ],
@@ -120,7 +121,7 @@ class SignupScreen extends StatelessWidget {
                         SizedBox(height: 8),
                         CustomTextField(
                           hintText: AppStrings.enterEmail.tr,
-                          controller: controller.passwordController,
+                          controller: controller.emailController,
                           borderRadius: 10,
                           prefixIcon: Assets.icons.lock,
                           isPassword: true,
@@ -156,10 +157,10 @@ class SignupScreen extends StatelessWidget {
                         SizedBox(height: 8),
                         CustomTextField(
                           hintText: "",
-                          controller: controller.passwordController,
+                          controller: controller.locationController,
                           borderRadius: 10,
                           prefixIcon: Assets.icons.lock,
-                          isPassword: true,
+                          isPassword: false,
                         ),
                         SizedBox(height: 8),
                         //======================CONTACT======================
@@ -229,7 +230,7 @@ class SignupScreen extends StatelessWidget {
                         SizedBox(height: 8),
                         CustomTextField(
                           hintText: AppStrings.enterPassword.tr,
-                          controller: controller.passwordController,
+                          controller: controller.confirmPasswordController,
                           borderRadius: 10,
                           prefixIcon: Assets.icons.lock,
                           isPassword: true,
@@ -241,6 +242,9 @@ class SignupScreen extends StatelessWidget {
                           backgroundColor: AppColors.greenPrimary,
                           buttonWidth: double.infinity,
                           buttonHeight: 60.h,
+                          onPressed: (){
+                          Get.toNamed(AppRoutes.mainNavScreen);
+                          },
                         ),
                         SizedBox(height: 10.h,),
                         //===================DIVIDER=========================//

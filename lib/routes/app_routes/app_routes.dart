@@ -24,4 +24,5 @@ class AppRoutes {
   static const String categoriesScreen = "/categories_screen";
   static const String itemDetailsScreen = "/item_details_screen";
   static const String orderDetailsScreen = "/order_details_screen";
+  static const String trackRiderScreen = "/track_rider_screen";
 }

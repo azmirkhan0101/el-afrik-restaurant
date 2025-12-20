@@ -22,11 +22,14 @@ class MainNavScreen extends StatelessWidget {
       }),
       bottomNavigationBar: Obx((){
         return BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           backgroundColor: AppColors.greenPrimary,
           elevation: 0,
           currentIndex: controller.currentIndex.value,
           showUnselectedLabels: true,
           fixedColor: Colors.white,
+          unselectedItemColor: AppColors.white,
+          unselectedLabelStyle: TextStyle(color: AppColors.white),
           onTap: (selectedIndex){
             if( selectedIndex != controller.currentIndex.value ){
               controller.currentIndex.value = selectedIndex;
