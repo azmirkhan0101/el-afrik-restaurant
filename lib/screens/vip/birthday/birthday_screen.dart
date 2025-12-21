@@ -16,7 +16,11 @@ class BirthdayScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      appBar: CustomAppBar(),
+      appBar: AppBar(
+        forceMaterialTransparency: true,
+        title: Text(AppStrings.birthdayReward.tr),
+        centerTitle: true,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

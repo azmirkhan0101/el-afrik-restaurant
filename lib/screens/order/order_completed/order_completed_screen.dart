@@ -46,20 +46,14 @@ class OrderCompletedScreen extends StatelessWidget {
             TextWidget(text: AppStrings.yourOrderHasBeenCompleted.tr,
             fontColor: Colors.blueAccent,
             ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextWidget(text: AppStrings.rateElAfrik.tr,
+            TextButton(
+              onPressed: (){
+                Get.toNamed(AppRoutes.rateUsScreen);
+              },
+              child: TextWidget(text: AppStrings.rateElAfrik.tr,
                 fontColor: AppColors.greenPrimary,
                 fontWeight: FontWeight.w600,
-                ),
-                SizedBox(width: 8.w,),
-                Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
-                Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
-                Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
-                Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
-                Icon(Icons.star_rate_outlined, color: AppColors.orange, size: 25.r,),
-              ],
+              ),
             ),
             SizedBox( height: 25.h,),
             Padding(

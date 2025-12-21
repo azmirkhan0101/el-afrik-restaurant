@@ -15,7 +15,7 @@ class TrackRiderScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Google Route Visualization"),
+        title: const Text("Rider's Location"),
         actions: [TravelModeSelector(controller: controller)],
       ),
       body: Stack(

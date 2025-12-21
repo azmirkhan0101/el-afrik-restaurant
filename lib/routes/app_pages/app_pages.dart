@@ -1,17 +1,27 @@
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/new_password/new_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/pickup/pickup_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/history/order_history/order_history_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/privacy_policy/privacy_policy_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/terms_conditions/terms_conditions_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/wishlist/wishlist_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/categories/categories_screen.dart';
-import 'package:el_afrik_restaurant/screens/home/item_details/item_details_screen.dart';
+import 'package:el_afrik_restaurant/screens/home/top_flavours_details/top_flavours_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/top_flavours/top_flavours_screen.dart';
 import 'package:el_afrik_restaurant/screens/main_nav/main_nav_screen.dart';
 import 'package:el_afrik_restaurant/screens/onboarding/onboarding_screen/onboarding_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_completed/order_completed_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/order_details/order_details_screen.dart';
+import 'package:el_afrik_restaurant/screens/order/rate_us/rate_us_screen.dart';
 import 'package:el_afrik_restaurant/screens/order/track_rider/track_rider_screen.dart';
+import 'package:el_afrik_restaurant/screens/profile/edit_profile/edit_profile_screen.dart';
+import 'package:el_afrik_restaurant/screens/promo_events/promo_details/promo_details_screen.dart';
+import 'package:el_afrik_restaurant/screens/promo_events/promo_events/promo_events_screen.dart';
+import 'package:el_afrik_restaurant/screens/promo_events/special_promos/special_promos_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
@@ -131,9 +141,9 @@ class AppPages {
           return CategoriesScreen();
         }),
     GetPage(
-        name: AppRoutes.itemDetailsScreen,
+        name: AppRoutes.topFlavoursDetailsScreen,
         page: (){
-          return ItemDetailsScreen();
+          return TopFlavoursDetailsScreen();
         }),
     GetPage(
         name: AppRoutes.orderDetailsScreen,
@@ -144,6 +154,56 @@ class AppPages {
         name: AppRoutes.trackRiderScreen,
         page: (){
           return TrackRiderScreen();
+        }),
+    GetPage(
+        name: AppRoutes.rateUsScreen,
+        page: (){
+          return RateUsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.promosEventsScreen,
+        page: (){
+          return PromoEventsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.specialPromosScreen,
+        page: (){
+          return SpecialPromosScreen();
+        }),
+    GetPage(
+        name: AppRoutes.promosDetailsScreen,
+        page: (){
+          return PromoDetailsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.privacyPolicyScreen,
+        page: (){
+          return PrivacyPolicyScreen();
+        }),
+    GetPage(
+        name: AppRoutes.termsConditionsScreen,
+        page: (){
+          return TermsConditionsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.editProfileScreen,
+        page: (){
+          return EditProfileScreen();
+        }),
+    GetPage(
+        name: AppRoutes.pickupScreen,
+        page: (){
+          return PickupScreen();
+        }),
+    GetPage(
+        name: AppRoutes.wishListScreen,
+        page: (){
+          return WishlistScreen();
+        }),
+    GetPage(
+        name: AppRoutes.orderHistoryScreen,
+        page: (){
+          return OrderHistoryScreen();
         })
   ];
 }

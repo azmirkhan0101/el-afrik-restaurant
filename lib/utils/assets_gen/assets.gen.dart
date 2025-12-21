@@ -14,6 +14,14 @@ import 'package:flutter/widgets.dart';
 class $AssetsDummyGen {
   const $AssetsDummyGen();
 
+  /// File path: assets/dummy/cart_item.png
+  AssetGenImage get cartItem =>
+      const AssetGenImage('assets/dummy/cart_item.png');
+
+  /// File path: assets/dummy/history_item.jpg
+  AssetGenImage get historyItem =>
+      const AssetGenImage('assets/dummy/history_item.jpg');
+
   /// File path: assets/dummy/order.png
   AssetGenImage get order => const AssetGenImage('assets/dummy/order.png');
 
@@ -36,14 +44,21 @@ class $AssetsDummyGen {
   AssetGenImage get topFlavourItem =>
       const AssetGenImage('assets/dummy/top_flavour_item.png');
 
+  /// File path: assets/dummy/user_photo.png
+  AssetGenImage get userPhoto =>
+      const AssetGenImage('assets/dummy/user_photo.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
+    cartItem,
+    historyItem,
     order,
     orderdItem,
     pizza,
     sliderItem,
     topFlavourDummy,
     topFlavourItem,
+    userPhoto,
   ];
 }
 
@@ -177,6 +192,12 @@ class $AssetsImagesGen {
   AssetGenImage get logo1024 =>
       const AssetGenImage('assets/images/logo1024.png');
 
+  /// File path: assets/images/logo320.png
+  AssetGenImage get logo320 => const AssetGenImage('assets/images/logo320.png');
+
+  /// File path: assets/images/logo640.png
+  AssetGenImage get logo640 => const AssetGenImage('assets/images/logo640.png');
+
   /// File path: assets/images/no_internet.png
   AssetGenImage get noInternet =>
       const AssetGenImage('assets/images/no_internet.png');
@@ -209,6 +230,10 @@ class $AssetsImagesGen {
   AssetGenImage get qrScanner =>
       const AssetGenImage('assets/images/qr_scanner.png');
 
+  /// File path: assets/images/rider_icon.png
+  AssetGenImage get riderIcon =>
+      const AssetGenImage('assets/images/rider_icon.png');
+
   /// File path: assets/images/splash_onboarding.png
   AssetGenImage get splashOnboarding =>
       const AssetGenImage('assets/images/splash_onboarding.png');
@@ -228,6 +253,8 @@ class $AssetsImagesGen {
     loginGraphics,
     logo,
     logo1024,
+    logo320,
+    logo640,
     noInternet,
     noMenuAvailable,
     noReward,
@@ -236,6 +263,7 @@ class $AssetsImagesGen {
     outOfStock,
     pickupGraphics,
     qrScanner,
+    riderIcon,
     splashOnboarding,
     warning,
   ];
@@ -244,9 +272,13 @@ class $AssetsImagesGen {
 class Assets {
   const Assets._();
 
+  static const String aEnv = '.env';
   static const $AssetsDummyGen dummy = $AssetsDummyGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+
+  /// List of all assets
+  static List<String> get values => [aEnv];
 }
 
 class AssetGenImage {

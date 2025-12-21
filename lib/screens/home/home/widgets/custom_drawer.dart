@@ -1,6 +1,8 @@
+import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../utils/assets_gen/assets.gen.dart';
 
@@ -31,16 +33,45 @@ class CustomDrawer extends StatelessWidget {
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                _buildDrawerItem(Icons.favorite_border, 'Wish List'),
-                _buildDrawerItem(Icons.history, 'History'),
-                _buildDrawerItem(Icons.settings_outlined, 'Settings'),
-                _buildDrawerItem(Icons.card_giftcard, 'Reward'),
-                _buildDrawerItem(Icons.groups_outlined, 'Promotion & Events'),
-                _buildDrawerItem(Icons.percent, 'Special Promos'),
-                _buildDrawerItem(Icons.restaurant, 'Catering Reservation'),
-                _buildDrawerItem(Icons.cake_outlined, 'Birthday Reward'),
-                _buildDrawerItem(Icons.layers_outlined, 'Privacy Policy'),
-                _buildDrawerItem(Icons.description_outlined, 'Terms & Conditions'),
+                _buildDrawerItem(Icons.favorite_border, 'Wish List', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.wishListScreen);
+                }),
+                _buildDrawerItem(Icons.history, 'History', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.orderHistoryScreen);
+                }),
+                _buildDrawerItem(Icons.settings_outlined, 'Settings', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.settingsScreen);
+                }),
+                _buildDrawerItem(Icons.card_giftcard, 'Reward', (){
+                  Get.back();
+                }),
+                _buildDrawerItem(Icons.groups_outlined, 'Promotion & Events', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.promosEventsScreen);
+                }),
+                _buildDrawerItem(Icons.percent, 'Special Promos', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.specialPromosScreen);
+                }),
+                _buildDrawerItem(Icons.restaurant, 'Catering Reservation', (){
+                  Get.back();
+                //Get.toNamed(AppRoutes.specialPromosScreen);
+                }),
+                _buildDrawerItem(Icons.cake_outlined, 'Birthday Reward', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.birthdayScreen);
+                }),
+                _buildDrawerItem(Icons.layers_outlined, 'Privacy Policy', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.privacyPolicyScreen);
+                }),
+                _buildDrawerItem(Icons.description_outlined, 'Terms & Conditions', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.termsConditionsScreen);
+                }),
               ],
             ),
           ),
@@ -74,7 +105,7 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 
-  Widget _buildDrawerItem(IconData icon, String title) {
+  Widget _buildDrawerItem(IconData icon, String title, VoidCallback onPressed ) {
     return Column(
       children: [
         ListTile(
@@ -88,7 +119,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           onTap: () {
-
+            onPressed();
           },
         ),
         const Divider(height: 1, thickness: 0.5, indent: 16, endIndent: 16),

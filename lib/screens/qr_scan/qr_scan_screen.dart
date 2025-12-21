@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:el_afrik_restaurant/screens/main_nav/controller/main_nav_controller.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
 import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
@@ -19,6 +20,7 @@ class QrScanScreen extends StatelessWidget {
    RxString debugCode = "SWB-QR-9842736590".obs;
 
   final MobileScannerController _controller = MobileScannerController();
+  //final MainNavController mainNavController = Get.find<MainNavController>();
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,9 @@ class QrScanScreen extends StatelessWidget {
           fontWeight: FontWeight.w900,
         ),
         centerTitle: true,
+        leading: IconButton(onPressed: (){
+          //mainNavController.currentIndex.value  = 0;
+        }, icon: Icon(Icons.arrow_back_sharp)),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),

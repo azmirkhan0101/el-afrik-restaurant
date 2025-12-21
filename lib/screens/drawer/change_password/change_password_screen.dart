@@ -24,50 +24,50 @@ class ChangePasswordScreen extends StatelessWidget {
           fontColor: AppColors.black,
         ),
         centerTitle: true,
-        leading: Icon(Icons.arrow_back_ios_new_rounded),
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextWidget(text: AppStrings.currentPassword.tr),
-            SizedBox( height: 10.h,),
-            CustomTextField(
-                hintText: AppStrings.currentPassword.tr,
-                controller: controller.currentPassword,
-              isPassword: true,
-            ),
-            SizedBox( height: 15.h,),
-            TextWidget(text: AppStrings.newPassword.tr),
-            SizedBox( height: 10.h,),
-            CustomTextField(
-              hintText: AppStrings.newPassword.tr,
-              controller: controller.newPassword,
-              isPassword: true,
-            ),
-            SizedBox( height: 15.h,),
-            TextWidget(text: AppStrings.confirmPassword.tr),
-            SizedBox( height: 10.h,),
-            CustomTextField(
-              hintText: AppStrings.confirmPassword.tr,
-              controller: controller.confirmPassword,
-              isPassword: true,
-            ),
-            Spacer(),
-            Padding(
-              padding: EdgeInsets.symmetric( horizontal: 15.w ),
-              child: ButtonWidget(label: AppStrings.confirm.tr,
-              backgroundColor: AppColors.greenPrimary,
-                buttonWidth: double.infinity,
-                buttonRadius: 100,
-                onPressed: (){
-
-                },
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 20.h,),
+              TextWidget(text: AppStrings.currentPassword.tr),
+              SizedBox( height: 10.h,),
+              CustomTextField(
+                  hintText: AppStrings.currentPassword.tr,
+                  controller: controller.currentPassword,
+                isPassword: true,
               ),
-            ),
-            SizedBox( height: 40.h,)
-          ],
+              SizedBox( height: 15.h,),
+              TextWidget(text: AppStrings.newPassword.tr),
+              SizedBox( height: 10.h,),
+              CustomTextField(
+                hintText: AppStrings.newPassword.tr,
+                controller: controller.newPassword,
+                isPassword: true,
+              ),
+              SizedBox( height: 15.h,),
+              TextWidget(text: AppStrings.confirmPassword.tr),
+              SizedBox( height: 10.h,),
+              CustomTextField(
+                hintText: AppStrings.confirmPassword.tr,
+                controller: controller.confirmPassword,
+                isPassword: true,
+              ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only( left: 15.w, right: 15.w, bottom: 40.h ),
+        child: ButtonWidget(label: AppStrings.confirm.tr,
+          backgroundColor: AppColors.greenPrimary,
+          buttonWidth: double.infinity,
+          buttonRadius: 100,
+          onPressed: (){
+
+          },
         ),
       ),
     );

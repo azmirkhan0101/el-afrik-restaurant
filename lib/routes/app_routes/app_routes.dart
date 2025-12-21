@@ -22,7 +22,17 @@ class AppRoutes {
   static const String orderCompletedScreen = "/order_completed_screen";
   static const String topFlavoursScreen = "/top_flavours_screen";
   static const String categoriesScreen = "/categories_screen";
-  static const String itemDetailsScreen = "/item_details_screen";
+  static const String topFlavoursDetailsScreen = "/top_flavours_details_screen";
   static const String orderDetailsScreen = "/order_details_screen";
   static const String trackRiderScreen = "/track_rider_screen";
+  static const String rateUsScreen = "/rate_us_screen";
+  static const String promosEventsScreen = "/promo_events_screen";
+  static const String specialPromosScreen = "/special_promos_screen";
+  static const String promosDetailsScreen = "/promo_details_screen";
+  static const String privacyPolicyScreen = "/privacy_policy_screen";
+  static const String termsConditionsScreen = "/terms_conditions_screen";
+  static const String editProfileScreen = "/edit_profile_screen";
+  static const String pickupScreen = "/pickup_screen";
+  static const String wishListScreen = "/wishlist_screen";
+  static const String orderHistoryScreen = "/order_history_screen";
 }

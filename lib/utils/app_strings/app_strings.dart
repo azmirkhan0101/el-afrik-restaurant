@@ -60,6 +60,7 @@ class AppStrings {
   static const String qrSc = "QR Sc";
   static const String cart = "Cart";
   static const String profile = "Profile";
+  static const String editProfile = "Edit Profile";
   static const String about = "About";
   static const String readMore = "Read More";
   static const String addToCart = "Add to cart";
@@ -73,6 +74,7 @@ class AppStrings {
   static const String apply = "Apply";
   static const String orderCompleted = "Order Completed";
   static const String name = "Name";
+  static const String userName = "User Name";
   static const String contactNo = "Contact No";
   static const String address = "Address:";
   static const String deliveryDate = "Delivery Date:";
