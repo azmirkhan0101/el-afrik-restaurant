@@ -1,5 +1,6 @@
 import 'package:el_afrik_restaurant/data/models/home/top_flavours/top_flavours_model.dart';
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
+import 'package:el_afrik_restaurant/screens/drawer/wishlist/widgets/wishlist_item_widget.dart';
 import 'package:el_afrik_restaurant/screens/home/top_flavours/widgets/top_flavour_item.dart';
 import 'package:el_afrik_restaurant/utils/app_colors/app_colors.dart';
 import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
@@ -124,7 +125,7 @@ class WishlistScreen extends StatelessWidget {
 
                 final TopFlavoursModel model = dummyModels[index];
 
-                return TopFlavourItem(
+                return WishlistItemWidget(
                     imageUrl: model.imageUrl,
                     title: model.name,
                     weightInfo: model.weightInfo,

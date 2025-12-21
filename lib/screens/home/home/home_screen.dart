@@ -34,7 +34,9 @@ class HomeScreen extends StatelessWidget {
         //leading: Icon(Icons.menu, color: AppColors.greenPrimary),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AppRoutes.notificationScreen);
+            },
             icon: Icon(Icons.notifications, color: AppColors.greenPrimary),
           ),
         ],

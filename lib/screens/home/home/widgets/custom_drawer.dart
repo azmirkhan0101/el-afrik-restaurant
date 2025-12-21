@@ -18,9 +18,10 @@ class CustomDrawer extends StatelessWidget {
           Container(
             width: double.infinity,
             padding: const EdgeInsets.only(top: 60, bottom: 30),
-            color: AppColors.greenShade, // Light greenish background
+            color: AppColors.greenShade,
             child: Center(
-              child: Image.asset(Assets.images.logo.keyName,
+              child: Image.asset(
+                Assets.images.logo.keyName,
               height: 81.h,
                 width: 144.w,
                 fit: BoxFit.cover,
@@ -47,6 +48,11 @@ class CustomDrawer extends StatelessWidget {
                 }),
                 _buildDrawerItem(Icons.card_giftcard, 'Reward', (){
                   Get.back();
+                  Get.toNamed(AppRoutes.rewardsScreen);
+                }),
+                _buildDrawerItem(Icons.workspace_premium_outlined, 'Loyalty Program', (){
+                  Get.back();
+                  Get.toNamed(AppRoutes.loyaltyProgramScreen);
                 }),
                 _buildDrawerItem(Icons.groups_outlined, 'Promotion & Events', (){
                   Get.back();
@@ -58,7 +64,7 @@ class CustomDrawer extends StatelessWidget {
                 }),
                 _buildDrawerItem(Icons.restaurant, 'Catering Reservation', (){
                   Get.back();
-                //Get.toNamed(AppRoutes.specialPromosScreen);
+                  Get.toNamed(AppRoutes.cateringScreen);
                 }),
                 _buildDrawerItem(Icons.cake_outlined, 'Birthday Reward', (){
                   Get.back();

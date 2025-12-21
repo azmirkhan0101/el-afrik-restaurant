@@ -14,6 +14,7 @@ class AppColors {
   static const Color whiteF5 = Color(0xFFF5F5F5);
   static const Color black = Color(0xFF000000);
   static const Color black32 = Color(0xFF323232);
+  static const Color black55 = Color(0xFF555555);
   static const Color blackTitle = Color(0xFF1D242D);
   static const Color blackSubtitle = Color(0xFF2B4E63);
   static const Color grey72 = Color(0xFF727272);
@@ -26,6 +27,11 @@ class AppColors {
   static const Color categoryGreen = Color(0xFFCADFC5);
   static const Color greenPrimary = Color(0xFF00B047);
   static const Color gradientEnd = Color(0xFF34C759);
+
+  //NOT ACTUAL COLOR NAME - USAGE NAME ONLY
+  static const Color silverColor = Color(0xFFF8E5DF);
+  static const Color goldColor = Color(0xFFF8E5DF);
+  static const Color platinumColor = Color(0xFFF8E5DF);
 
   static const LinearGradient greenGradient = LinearGradient(
       colors: [

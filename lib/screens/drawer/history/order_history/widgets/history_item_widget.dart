@@ -1,4 +1,6 @@
+import 'package:el_afrik_restaurant/widgets/button_widget/button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HistoryItemWidget extends StatelessWidget {
   final int totalProducts;
@@ -8,6 +10,7 @@ class HistoryItemWidget extends StatelessWidget {
   final String driverName;
   final String driverPhone;
   final String driverImageUrl;
+  final VoidCallback onViewClick;
 
   const HistoryItemWidget({
     super.key,
@@ -17,18 +20,26 @@ class HistoryItemWidget extends StatelessWidget {
     required this.date,
     required this.driverName,
     required this.driverPhone,
-    required this.driverImageUrl
+    required this.driverImageUrl,
+    required this.onViewClick
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400, // Fixed width for demonstration
-      padding: const EdgeInsets.all(20),
+      width: double.infinity,
+      margin: EdgeInsets.only(bottom: 10.h),
+      padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 8.h),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.grey.shade200),
+          boxShadow: [
+          BoxShadow(
+          color: Color(0x5A6CEA12),
+      spreadRadius: 1,
+      blurRadius: 10,)
+          ]
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,18 +50,14 @@ class HistoryItemWidget extends StatelessWidget {
             style: const TextStyle(fontSize: 18, color: Colors.black87),
           ),
           const SizedBox(height: 12),
-          Row(
-            children: [
-              Text(
-                'Delivery Fee : \$${deliveryFee.toInt()}',
-                style: const TextStyle(fontSize: 18, color: Colors.black87),
-              ),
-              const SizedBox(width: 30),
-              Text(
-                'Price: \$${price.toInt()}',
-                style: const TextStyle(fontSize: 18, color: Colors.black87),
-              ),
-            ],
+          Text(
+            'Price: \$${price.toInt()}',
+            style: const TextStyle(fontSize: 18, color: Colors.black87),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'Delivery Fee : \$${deliveryFee.toInt()}',
+            style: const TextStyle(fontSize: 18, color: Colors.black87),
           ),
           const SizedBox(height: 12),
           Text(
@@ -66,49 +73,42 @@ class HistoryItemWidget extends StatelessWidget {
               color: const Color(0xFFE8F3E8), // Light green background
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Row(
+            child: Column(
               children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage(driverImageUrl),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        driverName,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        driverPhone,
-                        style: const TextStyle(
-                            fontSize: 15, color: Colors.black54),
-                      ),
-                    ],
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF00B041),
-                    // Green button
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 24, vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 28,
+                      backgroundImage: AssetImage(driverImageUrl),
                     ),
-                    elevation: 0,
-                  ),
-                  child: const Text('Complete', style: TextStyle(fontSize: 16)),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            driverName,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            driverPhone,
+                            style: const TextStyle(
+                                fontSize: 15, color: Colors.black54),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
+                SizedBox(height: 8.h,),
+                ButtonWidget(label: "View",
+                  onPressed: onViewClick,
+                )
               ],
             ),
           ),

@@ -35,4 +35,9 @@ class AppRoutes {
   static const String pickupScreen = "/pickup_screen";
   static const String wishListScreen = "/wishlist_screen";
   static const String orderHistoryScreen = "/order_history_screen";
+  static const String historyDetailsScreen = "/history_details_screen";
+  static const String notificationScreen = "/notification_screen";
+  static const String rewardsScreen = "/rewards_screen";
+  static const String cateringScreen = "/catering_screen";
+  static const String loyaltyProgramScreen = "/loyalty_program_screen";
 }

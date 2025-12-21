@@ -43,6 +43,7 @@ class AppStrings {
   static const String history = "History";
   static const String settings = "Settings";
   static const String reward = "Reward";
+  static const String loyaltyProgram = "Loyalty Program";
   static const String promotionEvents = "Promotion & Events";
   static const String specialPromos = "Special Promos";
   static const String cateringReservation = "Catering Reservation";
@@ -212,7 +213,7 @@ class AppStrings {
   static const String premium = "Premium";
   static const String custom = "Custom";
   static const String writeSpecialInstructions = "Write Special Instructions";
-  static const String requestingCatering = "Requesting Catering";
+  static const String requestCatering = "Request Catering";
   static const String yourCateringRequest = "Your Catering request has been submitted.";
   static const String weWellContactYouSoon = "We Will Contact You Soon.";
   static const String rewardDetails = "Reward Details";

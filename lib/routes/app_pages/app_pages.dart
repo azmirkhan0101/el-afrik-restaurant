@@ -2,14 +2,19 @@ import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/new_password/new_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.dart';
 import 'package:el_afrik_restaurant/screens/cart/pickup/pickup_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/catering/catering_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/change_password/change_password_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/history/history_details/history_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/history/order_history/order_history_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/loyalty/loyalty/loyalty_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/privacy_policy/privacy_policy_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/reward/rewards_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/terms_conditions/terms_conditions_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/wishlist/wishlist_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/categories/categories_screen.dart';
+import 'package:el_afrik_restaurant/screens/home/notification/notification_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/top_flavours_details/top_flavours_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/home/top_flavours/top_flavours_screen.dart';
 import 'package:el_afrik_restaurant/screens/main_nav/main_nav_screen.dart';
@@ -204,6 +209,31 @@ class AppPages {
         name: AppRoutes.orderHistoryScreen,
         page: (){
           return OrderHistoryScreen();
+        }),
+    GetPage(
+        name: AppRoutes.historyDetailsScreen,
+        page: (){
+          return HistoryDetailsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.notificationScreen,
+        page: (){
+          return NotificationScreen();
+        }),
+    GetPage(
+        name: AppRoutes.rewardsScreen,
+        page: (){
+          return RewardsScreen();
+        }),
+    GetPage(
+        name: AppRoutes.cateringScreen,
+        page: (){
+          return CateringScreen();
+        }),
+    GetPage(
+        name: AppRoutes.loyaltyProgramScreen,
+        page: (){
+          return LoyaltyScreen();
         })
   ];
 }

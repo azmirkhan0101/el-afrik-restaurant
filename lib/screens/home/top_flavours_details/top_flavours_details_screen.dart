@@ -14,7 +14,9 @@ import '../../../utils/assets_gen/assets.gen.dart';
 import '../top_flavours/widgets/top_flavour_item.dart';
 
 class TopFlavoursDetailsScreen extends StatelessWidget {
-  const TopFlavoursDetailsScreen({super.key});
+   TopFlavoursDetailsScreen({super.key});
+
+   RxBool isFavourite = true.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -139,13 +141,20 @@ class TopFlavoursDetailsScreen extends StatelessWidget {
                             top: 0,
                             right: 10,
                             child: IconButton(
-                                onPressed: (){},
+                                onPressed: (){
+                                  isFavourite.value = !isFavourite.value;
+                                },
                                 style: ButtonStyle(
                                     backgroundColor: WidgetStatePropertyAll(AppColors.white,),
                                     shape: WidgetStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)))
                                 ),
-                                icon: Icon(Icons.favorite_outlined, color: AppColors.red,
-                                )
+                                icon: Obx((){
+                                  if( isFavourite.value ){
+                                    return Icon(Icons.favorite_rounded, color: AppColors.red,);
+                                  }else{
+                                    return Icon(Icons.favorite_outline, color: Colors.lightGreen,);
+                                  }
+                                })
                             )
                         )
                       ],

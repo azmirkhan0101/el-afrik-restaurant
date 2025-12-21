@@ -172,7 +172,7 @@ class CartScreen extends StatelessWidget {
             backgroundColor: AppColors.orange,
               buttonRadius: 12,
               onPressed: (){
-              Get.toNamed(AppRoutes.pickupScreen);
+              showDeliveryMethodSelectionAlert(context);
               },
             )
           ],
@@ -180,5 +180,23 @@ class CartScreen extends StatelessWidget {
         ),
       )
     );
+  }
+
+  void showDeliveryMethodSelectionAlert(BuildContext context){
+    showDialog(context: context, builder: (BuildContext context){
+      return AlertDialog(
+        title: TextWidget(text: "Select delivery method"),
+        actions: [
+          TextButton(onPressed: (){
+            Get.back();
+            Get.toNamed(AppRoutes.pickupScreen);
+          }, child: TextWidget(text: "Pickup")),
+          TextButton(onPressed: (){
+            Get.back();
+            //Get.toNamed(AppRoutes.pickupScreen);
+          }, child: TextWidget(text: "Delivery"))
+        ],
+      );
+    });
   }
 }
