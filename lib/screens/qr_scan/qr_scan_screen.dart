@@ -33,9 +33,7 @@ class QrScanScreen extends StatelessWidget {
           fontWeight: FontWeight.w900,
         ),
         centerTitle: true,
-        leading: IconButton(onPressed: (){
-          //mainNavController.currentIndex.value  = 0;
-        }, icon: Icon(Icons.arrow_back_sharp)),
+        leading: SizedBox.shrink()
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w),

@@ -30,8 +30,8 @@ class AppColors {
 
   //NOT ACTUAL COLOR NAME - USAGE NAME ONLY
   static const Color silverColor = Color(0xFFF8E5DF);
-  static const Color goldColor = Color(0xFFF8E5DF);
-  static const Color platinumColor = Color(0xFFF8E5DF);
+  static const Color goldColor = Color(0xFFFEE4B8);
+  static const Color platinumColor = Color(0xFFB0E7C6);
 
   static const LinearGradient greenGradient = LinearGradient(
       colors: [

@@ -50,142 +50,144 @@ class LoginScreen extends StatelessWidget {
             ),
             SafeArea(
               child: SizedBox.expand(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 18.w),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                          Assets.images.loginGraphics.keyName,
-                        height: 315.h,
-                        width: 315.w,
-                      ),
-                      TextWidget(text: AppStrings.gladToMeetYouAgain.tr,
-                      fontColor: AppColors.aniFlashWhite,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 20,
-                      ),
-                      SizedBox(height: 8),
-                      //===================EMAIL=========================//
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: TextWidget(
-                          text: AppStrings.emailAddressOrPhoneNumber.tr,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          fontColor: AppColors.aniFlashWhite,
-                          figmaLetterSpacing: -2,
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 18.w),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                            Assets.images.loginGraphics.keyName,
+                          height: 315.h,
+                          width: 315.w,
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextField(
-                        hintText: AppStrings.enterEmail.tr,
-                        controller: controller.emailController,
-                        borderRadius: 10,
-                      ),
-                      SizedBox(height: 8,),
-                      //===================PASSWORD=========================//
-                      Align(
-                        alignment: Alignment.topLeft,
-                        child: TextWidget(
-                          text: AppStrings.password.tr,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          fontColor: AppColors.aniFlashWhite,
-                          figmaLetterSpacing: -2,
+                        TextWidget(text: AppStrings.gladToMeetYouAgain.tr,
+                        fontColor: AppColors.aniFlashWhite,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20,
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      CustomTextField(
-                        hintText: AppStrings.enterPassword.tr,
-                        controller: controller.passwordController,
-                        borderRadius: 10,
-                        isPassword: true,
-                      ),
-                      //===================FORGOT PASSWORD=========================//
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                          child: GestureDetector(
-                            onTap: (){
-                              Get.toNamed(AppRoutes.welcomeScreen);
-                            },
+                        SizedBox(height: 8),
+                        //===================EMAIL=========================//
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: TextWidget(
+                            text: AppStrings.emailAddressOrPhoneNumber.tr,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            fontColor: AppColors.aniFlashWhite,
+                            figmaLetterSpacing: -2,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        CustomTextField(
+                          hintText: AppStrings.enterEmail.tr,
+                          controller: controller.emailController,
+                          borderRadius: 10,
+                        ),
+                        SizedBox(height: 8,),
+                        //===================PASSWORD=========================//
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: TextWidget(
+                            text: AppStrings.password.tr,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            fontColor: AppColors.aniFlashWhite,
+                            figmaLetterSpacing: -2,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        CustomTextField(
+                          hintText: AppStrings.enterPassword.tr,
+                          controller: controller.passwordController,
+                          borderRadius: 10,
+                          isPassword: true,
+                        ),
+                        //===================FORGOT PASSWORD=========================//
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
                             child: GestureDetector(
                               onTap: (){
-                                Get.toNamed(AppRoutes.forgotPasswordScreen);
+                                Get.toNamed(AppRoutes.welcomeScreen);
                               },
-                              child: TextWidget(text: AppStrings.forgotThePassword.tr,
-                                fontColor: AppColors.orange,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                figmaLetterSpacing: -5,
+                              child: GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(AppRoutes.forgotPasswordScreen);
+                                },
+                                child: TextWidget(text: AppStrings.forgotThePassword.tr,
+                                  fontColor: AppColors.orange,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  figmaLetterSpacing: -5,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      SizedBox(height: 20.h,),
-                      //===================BUTTON=========================//
-                      ButtonWidget(label: AppStrings.logIn.tr,
-                        fontWeight: FontWeight.w700,
-                        backgroundColor: AppColors.greenPrimary,
-                        buttonWidth: double.infinity,
-                        buttonHeight: 60.h,
-                        onPressed: (){
-                        Get.toNamed( AppRoutes.mainNavScreen);
-                        },
-                      ),
-                      SizedBox(height: 10.h,),
-                      //===================DIVIDER=========================//
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Expanded(
-                            child: Divider(
-                              color: AppColors.greyB8,
-                              height: 2.h,
-                              endIndent: 4.w,
+                        SizedBox(height: 20.h,),
+                        //===================BUTTON=========================//
+                        ButtonWidget(label: AppStrings.logIn.tr,
+                          fontWeight: FontWeight.w700,
+                          backgroundColor: AppColors.greenPrimary,
+                          buttonWidth: double.infinity,
+                          buttonHeight: 60.h,
+                          onPressed: (){
+                          Get.toNamed( AppRoutes.mainNavScreen);
+                          },
+                        ),
+                        SizedBox(height: 10.h,),
+                        //===================DIVIDER=========================//
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Expanded(
+                              child: Divider(
+                                color: AppColors.greyB8,
+                                height: 2.h,
+                                endIndent: 4.w,
+                              ),
                             ),
-                          ),
-                          TextWidget(
-                            text: AppStrings.or.tr,
-                            fontColor: AppColors.aniFlashWhite,
-                            //fontFamily: FontFamily.openSans,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14.sp,
-                            figmaLetterSpacing: -5,
-                          ),
-                          Expanded(
-                            child: Divider(
-                              color: AppColors.greyB8,
-                              height: 2.h,
-                              indent: 4.w,
+                            TextWidget(
+                              text: AppStrings.or.tr,
+                              fontColor: AppColors.aniFlashWhite,
+                              //fontFamily: FontFamily.openSans,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14.sp,
+                              figmaLetterSpacing: -5,
                             ),
-                          )
-                        ],
-                      ),
-                      SizedBox(height: 20.h,),
-                      //===================GOOGLE/FACEBOOK/APPLE=========================//
-                      Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        spacing: 15.w,
-                        children: [
-                          BorderedIconButton(
-                              iconName: Assets.icons.googleLogin,
-                              onClick: (){}
-                          ),
-                          BorderedIconButton(
-                              iconName: Assets.icons.facebookLogin,
-                              onClick: (){}
-                          ),
-                          BorderedIconButton(
-                              iconName: Assets.icons.appleLogin,
-                              onClick: (){}
-                          ),
-                        ],
-                      )
-                    ],
+                            Expanded(
+                              child: Divider(
+                                color: AppColors.greyB8,
+                                height: 2.h,
+                                indent: 4.w,
+                              ),
+                            )
+                          ],
+                        ),
+                        SizedBox(height: 20.h,),
+                        //===================GOOGLE/FACEBOOK/APPLE=========================//
+                        Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          spacing: 15.w,
+                          children: [
+                            BorderedIconButton(
+                                iconName: Assets.icons.googleLogin,
+                                onClick: (){}
+                            ),
+                            BorderedIconButton(
+                                iconName: Assets.icons.facebookLogin,
+                                onClick: (){}
+                            ),
+                            BorderedIconButton(
+                                iconName: Assets.icons.appleLogin,
+                                onClick: (){}
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

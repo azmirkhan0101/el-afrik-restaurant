@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../utils/assets_gen/assets.gen.dart';
+
 // --- Controller ---
 class RatingController extends GetxController {
   var selectedRating = 0.obs;
@@ -21,7 +23,12 @@ class RateUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Rate El Afrik"),
+        forceMaterialTransparency: true,
+        title: Image.asset(
+          Assets.images.logo.keyName,
+          height: 61.h,
+          width: 109.w,
+        ),
         centerTitle: true,
       ),
       body: Container(

@@ -96,6 +96,7 @@ class AppStrings {
   static const String tellUs = "Tell us about your El Afrik experience";
   static const String shareReview = "Share Review";
   static const String orderDetails = "Order details";
+  static const String cartDetails = "Cart details";
   static const String addMore = "Add More";
   static const String subtotal = "Sub-Total";
   static const String deliveryCharge = "Delivery Charge";

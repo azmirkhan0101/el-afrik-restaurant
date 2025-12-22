@@ -40,4 +40,10 @@ class AppRoutes {
   static const String rewardsScreen = "/rewards_screen";
   static const String cateringScreen = "/catering_screen";
   static const String loyaltyProgramScreen = "/loyalty_program_screen";
+  static const String pointHistoryScreen = "/point_history_screen";
+  static const String deliveryScreen = "/delivery_screen";
+  static const String checkOutScreen = "/checkout_screen";
+  static const String completedScreen = "/completed_screen";
+  static const String paymentScreen = "/payment_screen";
+  static const String paymentSuccessScreen = "/payment_success_screen";
 }

@@ -37,13 +37,13 @@ class MapRouteController extends GetxController {
   Future<void> loadBikeMarker() async {
     bikeMarkerIcon = await BitmapDescriptor.fromAssetImage(
       const ImageConfiguration(size: Size(96, 96)),
-      'assets/images/rider_icon.png',
+      'assets/images/rider_car.png',
     );
     riderMarker = Marker(
       markerId: const MarkerId('end'),
       position: endLocation,
       icon: bikeMarkerIcon,
-      rotation: getBearing( startLocation, endLocation ),
+      rotation: getBearing( startLocation, endLocation ) + 90,
       flat: true,
       anchor: const Offset(0.5, 0.5), //center align
     );

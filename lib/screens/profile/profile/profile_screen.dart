@@ -22,6 +22,7 @@ class ProfileScreen extends StatelessWidget {
           fontColor: AppColors.black,
         ),
         centerTitle: true,
+        leading: SizedBox.shrink(),
         actions: [
           //==================EDIT ICON BUTTON=======================
           IconButton(onPressed: (){

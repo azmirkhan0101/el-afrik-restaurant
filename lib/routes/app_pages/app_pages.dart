@@ -1,6 +1,11 @@
 import 'package:el_afrik_restaurant/routes/app_routes/app_routes.dart';
 import 'package:el_afrik_restaurant/screens/auth/new_password/new_password_screen.dart';
 import 'package:el_afrik_restaurant/screens/auth/otp_verify/otp_verify_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/checkout/checkout_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/completed/completed_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/delivery/delivery_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/payment/payment_screen.dart';
+import 'package:el_afrik_restaurant/screens/cart/payment_success/payment_success_screen.dart';
 import 'package:el_afrik_restaurant/screens/cart/pickup/pickup_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/catering/catering_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/catering_submitted/catering_submitted_screen.dart';
@@ -8,6 +13,7 @@ import 'package:el_afrik_restaurant/screens/drawer/change_password/change_passwo
 import 'package:el_afrik_restaurant/screens/drawer/history/history_details/history_details_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/history/order_history/order_history_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/loyalty/loyalty/loyalty_screen.dart';
+import 'package:el_afrik_restaurant/screens/drawer/loyalty/points_history/points_history_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/privacy_policy/privacy_policy_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/reward/rewards_screen.dart';
 import 'package:el_afrik_restaurant/screens/drawer/settings/settings_screen.dart';
@@ -234,6 +240,36 @@ class AppPages {
         name: AppRoutes.loyaltyProgramScreen,
         page: (){
           return LoyaltyScreen();
+        }),
+    GetPage(
+        name: AppRoutes.pointHistoryScreen,
+        page: (){
+          return PointsHistoryScreen();
+        }),
+    GetPage(
+        name: AppRoutes.deliveryScreen,
+        page: (){
+          return DeliveryScreen();
+        }),
+    GetPage(
+        name: AppRoutes.completedScreen,
+        page: (){
+          return CompletedScreen();
+        }),
+    GetPage(
+        name: AppRoutes.checkOutScreen,
+        page: (){
+          return CheckoutScreen();
+        }),
+    GetPage(
+        name: AppRoutes.paymentScreen,
+        page: (){
+          return PaymentScreen();
+        }),
+    GetPage(
+        name: AppRoutes.paymentSuccessScreen,
+        page: (){
+          return PaymentSuccessScreen();
         })
   ];
 }

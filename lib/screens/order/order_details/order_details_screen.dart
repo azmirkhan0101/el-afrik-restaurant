@@ -109,7 +109,7 @@ class OrderDetailsScreen extends StatelessWidget {
               child: TextButton(onPressed: (){
                 Get.toNamed(AppRoutes.trackRiderScreen);
             }, child: TextWidget(
-                text: AppStrings.viewRidersLocation.tr,
+                text: AppStrings.viewMapRoute.tr,
             fontColor: AppColors.orange,
             )),),
             SizedBox(height: 25.h,),

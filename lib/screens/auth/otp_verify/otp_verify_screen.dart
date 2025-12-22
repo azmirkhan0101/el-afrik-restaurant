@@ -50,57 +50,59 @@ class OtpVerifyScreen extends StatelessWidget {
             ),
             SafeArea(
               child: SizedBox.expand(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 18.w),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                          Assets.images.otpGraphics.keyName,
-                        height: 270.h,
-                        width: 274.w,
-                      ),
-                      SizedBox(height: 20.h,),
-                      TextWidget(text: "${AppStrings.codeHasBeenSendTo.tr} abc@mail.com",
-                      fontSize: 16,
-                        fontColor: AppColors.aniFlashWhite,
-                      ),
-                      SizedBox(height: 30.h,),
-                      Padding(
-                        padding: EdgeInsets.symmetric( horizontal: 40.w ),
-                        child: PinFieldWidget(
-                            controller: controller.otpController,
-                            length: 4
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 18.w),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                            Assets.images.otpGraphics.keyName,
+                          height: 270.h,
+                          width: 274.w,
                         ),
-                      ),
-                      SizedBox(height: 15.h,),
-                      RichText(text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: AppStrings.resendCodeIn.tr
+                        SizedBox(height: 20.h,),
+                        TextWidget(text: "${AppStrings.codeHasBeenSendTo.tr} abc@mail.com",
+                        fontSize: 16,
+                          fontColor: AppColors.aniFlashWhite,
+                        ),
+                        SizedBox(height: 30.h,),
+                        Padding(
+                          padding: EdgeInsets.symmetric( horizontal: 40.w ),
+                          child: PinFieldWidget(
+                              controller: controller.otpController,
+                              length: 4
                           ),
-                          TextSpan(
-                              text: " 53 s",
-                            style: TextStyle(
-                              color: AppColors.orange
-                            )
-                          ),
-                        ]
-                      )
-                      ),
-                      SizedBox(height: 20.h,),
-                      //===================BUTTON=========================//
-                      ButtonWidget(label: AppStrings.confirm.tr,
-                        fontWeight: FontWeight.w700,
-                        backgroundColor: AppColors.greenPrimary,
-                        buttonWidth: double.infinity,
-                        buttonHeight: 60.h,
-                        onPressed: (){
-                        Get.toNamed(AppRoutes.newPasswordScreen);
-                        },
-                      ),
-                      SizedBox(height: 10.h,),
-                    ],
+                        ),
+                        SizedBox(height: 15.h,),
+                        RichText(text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: AppStrings.resendCodeIn.tr
+                            ),
+                            TextSpan(
+                                text: " 53 s",
+                              style: TextStyle(
+                                color: AppColors.orange
+                              )
+                            ),
+                          ]
+                        )
+                        ),
+                        SizedBox(height: 20.h,),
+                        //===================BUTTON=========================//
+                        ButtonWidget(label: AppStrings.confirm.tr,
+                          fontWeight: FontWeight.w700,
+                          backgroundColor: AppColors.greenPrimary,
+                          buttonWidth: double.infinity,
+                          buttonHeight: 60.h,
+                          onPressed: (){
+                          Get.toNamed(AppRoutes.newPasswordScreen);
+                          },
+                        ),
+                        SizedBox(height: 10.h,),
+                      ],
+                    ),
                   ),
                 ),
               ),

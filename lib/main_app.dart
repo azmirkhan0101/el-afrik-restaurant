@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
             ),
             initialBinding: InitialBinding(),
             getPages: AppPages.pages,
-            initialRoute: AppRoutes.mainNavScreen,
+            initialRoute: AppRoutes.welcomeScreen,
           );
         }
     );

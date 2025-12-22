@@ -1,5 +1,6 @@
 import 'package:el_afrik_restaurant/screens/order/track_rider/widgets/travel_mode_selector.dart';
 import 'package:el_afrik_restaurant/screens/order/track_rider/widgets/travel_stats_card.dart';
+import 'package:el_afrik_restaurant/utils/app_strings/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -15,7 +16,9 @@ class TrackRiderScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Rider's Location"),
+        title: Text(AppStrings.viewMapRoute.tr),
+        centerTitle: true,
+        titleTextStyle: TextStyle(fontWeight: FontWeight.w900, color: Colors.black, fontSize: 20),
         actions: [TravelModeSelector(controller: controller)],
       ),
       body: Stack(

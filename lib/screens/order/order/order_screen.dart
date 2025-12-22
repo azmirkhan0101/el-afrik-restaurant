@@ -32,7 +32,7 @@ class OrderScreen extends StatelessWidget {
             fontWeight: FontWeight.w900,
           ),
           centerTitle: true,
-          leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
+          leading: SizedBox.shrink()
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w),

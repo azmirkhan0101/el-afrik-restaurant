@@ -59,6 +59,7 @@ class CartScreen extends StatelessWidget {
         forceMaterialTransparency: true,
         title: Text(AppStrings.cart.tr),
         centerTitle: true,
+        leading: SizedBox.shrink(),
       ),
       body: SingleChildScrollView(
         child: Padding(padding: EdgeInsets.symmetric(horizontal: 20.w),
@@ -67,7 +68,7 @@ class CartScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextWidget(text: AppStrings.orderDetails.tr,
+                TextWidget(text: AppStrings.cartDetails.tr,
                 fontSize: 20,
                   fontWeight: FontWeight.w800,
                 ),
@@ -183,20 +184,63 @@ class CartScreen extends StatelessWidget {
   }
 
   void showDeliveryMethodSelectionAlert(BuildContext context){
-    showDialog(context: context, builder: (BuildContext context){
-      return AlertDialog(
-        title: TextWidget(text: "Select delivery method"),
-        actions: [
-          TextButton(onPressed: (){
-            Get.back();
-            Get.toNamed(AppRoutes.pickupScreen);
-          }, child: TextWidget(text: "Pickup")),
-          TextButton(onPressed: (){
-            Get.back();
-            //Get.toNamed(AppRoutes.pickupScreen);
-          }, child: TextWidget(text: "Delivery"))
-        ],
-      );
-    });
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: const Text("Select Method"),
+          content: const Text("Please select your preferred delivery method to proceed."),
+          actionsAlignment: MainAxisAlignment.center,
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // Orange Pick Up Button
+                  _buildCustomButton(
+                    text: "Delivery",
+                    color: const Color(0xFFFFA726), // Orange
+                    onPressed: (){
+                      Get.back();
+                      Get.toNamed(AppRoutes.deliveryScreen);
+                    },
+                  ),
+                  // Green Pick Up Button
+                  _buildCustomButton(
+                    text: "Pick up",
+                    color: const Color(0xFF00C853), // Green
+                    onPressed: (){
+                      Get.back();
+                      Get.toNamed(AppRoutes.pickupScreen);
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Widget _buildCustomButton({required String text, required Color color, required VoidCallback onPressed}) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: color,
+        foregroundColor: Colors.white,
+        shape: const StadiumBorder(), // Creates the capsule shape
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        elevation: 0,
+      ),
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: const TextStyle(fontWeight: FontWeight.bold),
+      ),
+    );
   }
 }
+
+

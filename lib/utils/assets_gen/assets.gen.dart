@@ -122,6 +122,12 @@ class $AssetsIconsGen {
   /// File path: assets/icons/qr_selected.svg
   String get qrSelected => 'assets/icons/qr_selected.svg';
 
+  /// File path: assets/icons/redeem_icon.svg
+  String get redeemIcon => 'assets/icons/redeem_icon.svg';
+
+  /// File path: assets/icons/reward_icon.svg
+  String get rewardIcon => 'assets/icons/reward_icon.svg';
+
   /// File path: assets/icons/search.svg
   String get search => 'assets/icons/search.svg';
 
@@ -146,6 +152,8 @@ class $AssetsIconsGen {
     profileSelected,
     qrCode,
     qrSelected,
+    redeemIcon,
+    rewardIcon,
     search,
   ];
 }
@@ -168,6 +176,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/create_password_graphics.png
   AssetGenImage get createPasswordGraphics =>
       const AssetGenImage('assets/images/create_password_graphics.png');
+
+  /// File path: assets/images/dotted_lines.png
+  AssetGenImage get dottedLines =>
+      const AssetGenImage('assets/images/dotted_lines.png');
 
   /// File path: assets/images/forgot_password_graphics.png
   AssetGenImage get forgotPasswordGraphics =>
@@ -222,6 +234,10 @@ class $AssetsImagesGen {
   AssetGenImage get outOfStock =>
       const AssetGenImage('assets/images/out_of_stock.png');
 
+  /// File path: assets/images/payment_success_graphics.png
+  AssetGenImage get paymentSuccessGraphics =>
+      const AssetGenImage('assets/images/payment_success_graphics.png');
+
   /// File path: assets/images/pickup_graphics.png
   AssetGenImage get pickupGraphics =>
       const AssetGenImage('assets/images/pickup_graphics.png');
@@ -230,6 +246,10 @@ class $AssetsImagesGen {
   AssetGenImage get qrScanner =>
       const AssetGenImage('assets/images/qr_scanner.png');
 
+  /// File path: assets/images/rider_car.png
+  AssetGenImage get riderCar =>
+      const AssetGenImage('assets/images/rider_car.png');
+
   /// File path: assets/images/rider_icon.png
   AssetGenImage get riderIcon =>
       const AssetGenImage('assets/images/rider_icon.png');
@@ -237,6 +257,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/splash_onboarding.png
   AssetGenImage get splashOnboarding =>
       const AssetGenImage('assets/images/splash_onboarding.png');
+
+  /// File path: assets/images/success_confetti.png
+  AssetGenImage get successConfetti =>
+      const AssetGenImage('assets/images/success_confetti.png');
 
   /// File path: assets/images/warning.png
   AssetGenImage get warning => const AssetGenImage('assets/images/warning.png');
@@ -247,6 +271,7 @@ class $AssetsImagesGen {
     complete,
     confetti,
     createPasswordGraphics,
+    dottedLines,
     forgotPasswordGraphics,
     happyBirthday,
     loginBackground,
@@ -261,10 +286,13 @@ class $AssetsImagesGen {
     onboardingGraphics,
     otpGraphics,
     outOfStock,
+    paymentSuccessGraphics,
     pickupGraphics,
     qrScanner,
+    riderCar,
     riderIcon,
     splashOnboarding,
+    successConfetti,
     warning,
   ];
 }
