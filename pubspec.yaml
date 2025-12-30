@@ -29,6 +29,8 @@ dependencies:
   flutter_polyline_points: ^3.1.0
   http: ^1.6.0
   dio: ^5.9.0
+  get_storage: ^2.1.1
+  flutter_image_compress: ^2.4.0
 
 dev_dependencies:
   flutter_test:
@@ -59,12 +61,12 @@ flutter_gen:
 
 flutter_native_splash:
 
-  color: "#B0E7C6"  ##====================================[REQUIRED]==========
+  color: "#FFFFFF"  ##====================================[REQUIRED]==========
   image: assets/images/logo1024.png
   fullscreen: true
   android_12:
     # background color
-    color: "#B0E7C6"
-    image: assets/images/logo320.png
+    color: "#FFFFFF"
+    image: assets/images/logo1024.png
     # center-logo background color
     icon_background_color: "#B0E7C6"

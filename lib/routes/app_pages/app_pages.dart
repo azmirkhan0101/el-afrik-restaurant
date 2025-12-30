@@ -37,13 +37,13 @@ import 'package:el_afrik_restaurant/screens/states/no_internet/no_internet_scree
 import 'package:el_afrik_restaurant/screens/states/no_menu/no_menu_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/no_reward/no_reward_screen.dart';
 import 'package:el_afrik_restaurant/screens/states/out_of_stock/out_of_stock_screen.dart';
-import 'package:el_afrik_restaurant/screens/vip/birthday/birthday_screen.dart';
 import 'package:get/get.dart';
 
 import '../../screens/auth/auth_selection/auth_selection_screen.dart';
 import '../../screens/auth/forgot_password/forgot_password_screen.dart';
 import '../../screens/auth/login/login_screen.dart';
 import '../../screens/auth/signup/signup_screen.dart';
+import '../../screens/drawer/birthday/birthday_screen.dart';
 import '../../screens/onboarding/welcome_screen/welcome_screen.dart';
 
 class AppPages {

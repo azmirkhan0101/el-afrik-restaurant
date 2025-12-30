@@ -8,10 +8,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../../controllers/auth/login_controller.dart';
 import '../../../routes/app_routes/app_routes.dart';
 import '../../../utils/assets_gen/assets.gen.dart';
 import 'components/bordered_icon_button.dart';
-import 'controller/login_controller.dart';
 
 class LoginScreen extends StatelessWidget {
 
@@ -37,7 +37,9 @@ class LoginScreen extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
-          leading: Icon(Icons.arrow_back_sharp, color: AppColors.white),
+            leading: IconButton(onPressed: (){
+              Get.back();
+            }, icon: Icon(Icons.arrow_back_sharp, color: AppColors.white),)
         ),
         body: Stack(
           children: [
@@ -133,6 +135,7 @@ class LoginScreen extends StatelessWidget {
                           buttonWidth: double.infinity,
                           buttonHeight: 60.h,
                           onPressed: (){
+                          //controller.login();
                           Get.toNamed( AppRoutes.mainNavScreen);
                           },
                         ),

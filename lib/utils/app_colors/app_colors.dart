@@ -8,6 +8,7 @@ class AppColors {
 
 
   static const Color red = Color(0xFFFF0A0A);
+  static const Color errorRed = Color(0xFFF54A45);
   static const Color white = Color(0xFFFFFFFF);
   static const Color aniFlashWhite = Color(0xFFFDFDFD);
   static const Color offWhite = Color(0xFFEBEBEB);
@@ -23,6 +24,7 @@ class AppColors {
   static const Color orange = Color(0xFFFCA91B);
   static const Color orangeRed = Color(0xFFFF7D29);
   static const Color yellowWarning = Color(0xFFFFC804);
+  static const Color warningYellow = Color(0xffffcc00);
   static const Color greenShade = Color(0xFFB0E7C6);
   static const Color categoryGreen = Color(0xFFCADFC5);
   static const Color greenPrimary = Color(0xFF00B047);

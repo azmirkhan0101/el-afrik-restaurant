@@ -7,34 +7,6 @@ import '../../utils/app_colors/app_colors.dart';
 import '../../utils/assets_gen/assets.gen.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField({
-    super.key,
-    this.inputFormatters,
-    this.onFieldSubmitted,
-    this.controller,
-    this.focusNode,
-    this.keyboardType = TextInputType.text,
-    this.textInputAction = TextInputAction.next,
-    this.cursorColor = Colors.black,
-    this.inputTextStyle,
-    this.textAlignVertical = TextAlignVertical.center,
-    this.textAlign = TextAlign.start,
-    this.onChanged,
-    this.maxLines = 1,
-    this.validator,
-    this.hintText,
-    this.hintStyle,
-    this.fillColor,
-    this.borderRadius = 12,
-    this.borderColor = Colors.transparent,
-    this.isPassword = false,
-    this.readOnly = false,
-    this.maxLength,
-    this.onTap,
-    this.isDens = false,
-    this.prefixIcon,
-    this.suffixIcon,
-  });
 
   final TextEditingController? controller;
   final FocusNode? focusNode;
@@ -64,6 +36,35 @@ class CustomTextField extends StatefulWidget {
   final String? prefixIcon;
   final String? suffixIcon;
 
+  const CustomTextField({
+    super.key,
+    this.inputFormatters,
+    this.onFieldSubmitted,
+    this.controller,
+    this.focusNode,
+    this.keyboardType = TextInputType.text,
+    this.textInputAction = TextInputAction.next,
+    this.cursorColor = Colors.black,
+    this.inputTextStyle,
+    this.textAlignVertical = TextAlignVertical.center,
+    this.textAlign = TextAlign.start,
+    this.onChanged,
+    this.maxLines = 1,
+    this.validator,
+    this.hintText,
+    this.hintStyle,
+    this.fillColor,
+    this.borderRadius = 12,
+    this.borderColor = Colors.transparent,
+    this.isPassword = false,
+    this.readOnly = false,
+    this.maxLength,
+    this.onTap,
+    this.isDens = false,
+    this.prefixIcon,
+    this.suffixIcon,
+  });
+
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
 }
@@ -75,7 +76,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       onTap: widget.onTap,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
+      autovalidateMode: AutovalidateMode.disabled,
       inputFormatters: widget.inputFormatters,
       onFieldSubmitted: widget.onFieldSubmitted,
       readOnly: widget.readOnly,
@@ -153,10 +154,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderRadius: BorderRadius.circular(12.r),
           borderSide: BorderSide(color: Color(0xFFE4E4E4), width: 1.w),
         ),
-        // error border – পুরো outline লাল
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
-          borderSide: BorderSide(color: Colors.red, width: 1),
+          borderSide: BorderSide(color: AppColors.errorRed, width: 1),
         ),
       ),
     );

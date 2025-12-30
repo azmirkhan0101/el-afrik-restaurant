@@ -77,6 +77,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/cart_selected.svg
   String get cartSelected => 'assets/icons/cart_selected.svg';
 
+  /// File path: assets/icons/email.svg
+  String get email => 'assets/icons/email.svg';
+
   /// File path: assets/icons/eye.svg
   String get eye => 'assets/icons/eye.svg';
 
@@ -97,6 +100,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/home_selected.svg
   String get homeSelected => 'assets/icons/home_selected.svg';
+
+  /// File path: assets/icons/location.svg
+  String get location => 'assets/icons/location.svg';
 
   /// File path: assets/icons/lock.svg
   String get lock => 'assets/icons/lock.svg';
@@ -137,6 +143,7 @@ class $AssetsIconsGen {
     camera,
     cart,
     cartSelected,
+    email,
     eye,
     eyeHide,
     facebookLogin,
@@ -144,6 +151,7 @@ class $AssetsIconsGen {
     googleLogin,
     home,
     homeSelected,
+    location,
     lock,
     loyaltyPoint,
     order,
@@ -203,12 +211,6 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo1024.png
   AssetGenImage get logo1024 =>
       const AssetGenImage('assets/images/logo1024.png');
-
-  /// File path: assets/images/logo320.png
-  AssetGenImage get logo320 => const AssetGenImage('assets/images/logo320.png');
-
-  /// File path: assets/images/logo640.png
-  AssetGenImage get logo640 => const AssetGenImage('assets/images/logo640.png');
 
   /// File path: assets/images/no_internet.png
   AssetGenImage get noInternet =>
@@ -278,8 +280,6 @@ class $AssetsImagesGen {
     loginGraphics,
     logo,
     logo1024,
-    logo320,
-    logo640,
     noInternet,
     noMenuAvailable,
     noReward,

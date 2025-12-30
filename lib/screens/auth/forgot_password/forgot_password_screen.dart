@@ -36,7 +36,9 @@ class ForgotPasswordScreen extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.w700,
           ),
-          leading: Icon(Icons.arrow_back_sharp, color: AppColors.white),
+          leading: IconButton(onPressed: (){
+            Get.back();
+          }, icon: Icon(Icons.arrow_back_sharp, color: AppColors.white),)
         ),
         body: Stack(
           children: [
