@@ -8,27 +8,67 @@ import 'package:el_afrik_restaurant/widgets/text_widget/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
+import '../../../utils/app_constants/app_constants.dart';
 import '../../../utils/assets_gen/assets.gen.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+enum AuthStatus {
+  loggedIn,
+  loggedOut,
+}
 
-  authCheck() async{
-    await Future.delayed(Duration(seconds: 2));
-    Get.offAllNamed( AppRoutes.onBoardingScreen );
+
+class WelcomeScreen extends StatelessWidget {
+
+  final storage = GetStorage();
+
+  Future<AuthStatus> checkAuthStatus() async {
+
+    await Future.delayed(const Duration(milliseconds: 2500));
+
+    // Read the token and verification status
+    final String? token = storage.read( accessTokenKey );
+
+    // If token is null or empty, the user is logged out (or never logged in)
+    if ( token == null || token.isEmpty ) {//NO TOKEN -> LOGGED OUT
+      return AuthStatus.loggedOut;
+    }else{//TOKEN FOUND -> LOGGED IN
+      return AuthStatus.loggedIn;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
 
-    WidgetsBinding.instance.addPostFrameCallback((_){
-      authCheck();
-    });
-
     return Scaffold(
       backgroundColor: AppColors.white,
-      body: Stack(
+      body: FutureBuilder<AuthStatus>(
+          future: checkAuthStatus(),
+          builder: (context, snapshot){
+            if( !snapshot.hasData ){
+              return splashStack();
+            }
+
+            WidgetsBinding.instance.addPostFrameCallback((_){
+              final AuthStatus status = snapshot.data!;
+              if( status == AuthStatus.loggedIn ){
+                Get.toNamed( AppRoutes.mainNavScreen );
+              }else{
+                Get.offNamed( AppRoutes.authSelectionScreen );
+              }
+            });
+
+            return const SizedBox.shrink();
+
+          }
+      )
+    );
+  }
+
+  //STACK WIDGET TO SHOW WHILE SNAPSHOT IS LOADING
+Widget splashStack(){
+    return Stack(
         children: [
           Positioned(
               bottom: 0,
@@ -58,7 +98,7 @@ class WelcomeScreen extends StatelessWidget {
                     width: 332
                 ),
                 TextWidget(text: AppStrings.quickBites,
-                fontSize: 20,
+                  fontSize: 20,
                   fontColor: AppColors.grey72,
                   fontWeight: FontWeight.w500,
                 ),
@@ -71,7 +111,6 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
         ]
-      ),
     );
-  }
+}
 }

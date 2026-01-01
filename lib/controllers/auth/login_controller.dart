@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -5,10 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart' as http;
-import 'dart:async';
 
 import '../../core/show_snackbar.dart';
-import '../../routes/app_routes/app_routes.dart';
 import '../../utils/api_endpoints/api_endpoints.dart';
 import '../../utils/app_colors/app_colors.dart';
 import '../../utils/app_constants/app_constants.dart';
