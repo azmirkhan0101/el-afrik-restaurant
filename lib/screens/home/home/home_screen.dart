@@ -159,7 +159,7 @@ class HomeScreen extends StatelessWidget {
           CategoryItem(
             height: 100,
             width: 100,
-            imageHeight: 62,
+            imageHeight: 60,
             imageWidth: 85,
             imagePath: Assets.dummy.pizza.keyName,
             itemName: "Pizza",

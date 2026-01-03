@@ -232,6 +232,12 @@ class SignUpController extends GetxController {
     return result != null ? File(result.path) : null;
   }
 
+
+  //handle invalid cred
+  handleInvalidCred(){
+
+  }
+
   @override
   void onClose() {
     emailController.dispose();

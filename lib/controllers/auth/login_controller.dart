@@ -217,6 +217,11 @@ class LoginController extends GetxController{
     storage.write( refreshTokenKey, refreshToken);
   }
 
+  //handle invalid cred
+  handleInvalidCred(){
+
+  }
+
     @override
     void onClose() {
       emailController.dispose();
